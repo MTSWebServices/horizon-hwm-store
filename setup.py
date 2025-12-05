@@ -35,7 +35,7 @@ long_description = (here / "README.rst").read_text()
 setup(
     name="horizon-hwm-store",
     version=get_version(),
-    author="DataOps.ETL Team",
+    author="MWS Data Bridge Team",
     author_email="onetools@mts.ru",
     description="onETL Plugin for Horizon store",
     long_description=long_description,
