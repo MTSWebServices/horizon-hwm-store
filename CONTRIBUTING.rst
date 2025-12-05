@@ -6,12 +6,22 @@ reports, improving documentation, submitting feature requests, reviewing
 new submissions, or contributing code that can be incorporated into the
 project.
 
-Limitations
------------
+Review process
+--------------
 
-We should keep close to these items during development:
+For any **significant** changes please create a new GitHub issue and
+enhancements that you wish to make. Describe the feature you would like
+to see, why you need it, and how it will work. Discuss your ideas
+transparently and get community feedback before proceeding.
 
-* Some companies still use Python 3.7. So it is required to keep compatibility if possible.
+Small changes can directly be crafted and submitted to the GitHub
+Repository as a Pull Request. This requires creating a **repo fork** using
+`instruction <https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_.
+
+Important notes
+---------------
+
+Please take into account that some companies still use old Python versions, like 3.7. So the changes should be compatible.
 
 Initial setup for local development
 -----------------------------------
@@ -21,26 +31,19 @@ Install Git
 
 Please follow `instruction <https://docs.github.com/en/get-started/quickstart/set-up-git>`_.
 
-Create a fork
-~~~~~~~~~~~~~
-
-If you are not a member of a development team building Horizon HWM Store, you should create a fork before making any changes.
-
-Please follow `instruction <https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_.
-
 Clone the repo
 ~~~~~~~~~~~~~~
 
-Open terminal and run these commands:
+Open terminal and run these commands to clone a **forked** repo:
 
 .. code:: bash
 
-    git clone https://github.com/MobileTeleSystems/horizon-hwm-store -b develop
+    git clone git@github.com:myuser/horizon-hwm-store.git -b develop
 
     cd horizon-hwm-store
 
-Setup environment
-~~~~~~~~~~~~~~~~~
+Enable pre-commit hooks
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Create virtualenv and install dependencies:
 
@@ -48,29 +51,19 @@ Create virtualenv and install dependencies:
 
     python -m venv venv
     source venv/bin/activate
-
     pip install -U wheel
     pip install -U pip setuptools
-
     pip install -U \
         -r requirements.txt \
-        -r requirements-dev.txt \
-        -r requirements-docs.txt \
-        -r requirements-test.txt
+        -r requirements-dev.txt
 
-Enable pre-commit hooks
-~~~~~~~~~~~~~~~~~~~~~~~
-
-`pre-commit <https://pre-commit.com/>`_ hooks allows to validate & fix repository content before making new commit.
-It allows to run linters, formatters, fix file permissions and so on. If something is wrong, changes cannot be committed.
-
-Firstly, install pre-commit hooks:
+Install pre-commit hooks:
 
 .. code:: bash
 
     pre-commit install --install-hooks
 
-Ant then test hooks run:
+Test pre-commit hooks run:
 
 .. code:: bash
 
@@ -78,6 +71,19 @@ Ant then test hooks run:
 
 How to
 ------
+
+Run tests
+~~~~~~~~~
+
+.. note::
+
+    You can skip this if only source code behavior remains the same.
+
+Create virtualenv and install dependencies:
+
+.. code:: bash
+
+    pip install -U -r requirements-test.txt
 
 Start all containers with dependencies:
 
@@ -112,6 +118,16 @@ Stop all containers and remove created volumes:
 Build documentation
 ~~~~~~~~~~~~~~~~~~~
 
+.. note::
+
+    You can skip this if only source code behavior remains the same.
+
+Create virtualenv and install dependencies:
+
+.. code:: bash
+
+    pip install -U -r requirements-docs.txt
+
 Build documentation using Sphinx:
 
 .. code:: bash
@@ -119,35 +135,8 @@ Build documentation using Sphinx:
     cd docs
     make html
 
-If documentation should be build cleanly instead of reusing existing build result:
+Then open in browser ``docs/_build/index.html``.
 
-.. code:: bash
-
-    make clean html
-
-Pull Request Process
---------------------
-
-1. Update the README.md with details of changes to the interface,
-   including new environment variables, exposed ports, proper file
-   locations, and container parameters.
-2. Increase the version numbers in any examples files and the README.md
-   to the new version that this Pull Request would represent. The
-   versioning scheme we use is SemVer.
-3. You may merge the Pull Request in once you have the sign-off of two
-   other developers, or if you do not have permission to do that, you
-   may request the second reviewer to merge it for you. We expect to
-   have a minimum of one approval from someone else on the core team.
-
-Review Process
---------------
-
-We keep pull requests open for a few days for multiple people to have
-the chance to review/comment.
-
-After feedback has been given, we expect responses within two weeks.
-After two weeks, we may close the pull request if it isn't showing any
-activity.
 
 Create pull request
 ~~~~~~~~~~~~~~~~~~~
@@ -240,14 +229,17 @@ Examples for adding changelog entries to your Pull Requests
 .. _Towncrier philosophy:
     https://towncrier.readthedocs.io/en/stable/#philosophy
 
-
 How to skip change notes check?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Just add ``ci:skip-changelog`` label to pull request.
 
 Release Process
-^^^^^^^^^^^^^^^
+---------------
+
+.. note::
+
+    This is for repo maintainers only
 
 Before making a release from the ``develop`` branch, follow these steps:
 
