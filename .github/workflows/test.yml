@@ -90,7 +90,7 @@ jobs:
           include-hidden-files: true
 
       - name: Shutdown Backend Container
-        if: always()
+        if: success() || failure()
         run: |
           docker compose down -v --remove-orphans
         env:
@@ -110,16 +110,6 @@ jobs:
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          enable-cache: 'false'
-
-      # no uv cache here because fresh install takes about 1 second
-
-      - name: Install dependencies
-        run: uv sync --group test
-
       - name: Download all coverage reports
         uses: actions/download-artifact@v7
         with:
@@ -127,10 +117,22 @@ jobs:
           pattern: coverage-*
           merge-multiple: true
 
+      - name: Show test results
+        uses: mikepenz/action-junit-report@v5
+        with:
+          report_paths: reports/junit/*.xml
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: 'false'
+
+      # no uv cache here because fresh install takes about 1 second
+
       - name: Generate coverate reports
         run: |
-          uv run coverage combine
-          uv run coverage xml -o reports/coverage.xml
+          uv run --group test coverage combine
+          uv run --group test coverage xml -o reports/coverage.xml
 
       - name: Coverage comment
         id: coverage
