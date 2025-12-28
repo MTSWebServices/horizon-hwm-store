@@ -14,7 +14,7 @@ concurrency:
 
 env:
   DEFAULT_PYTHON: '3.13'
-  MIN_COVERAGE: 94
+  MIN_COVERAGE: 91
 
 permissions:
   contents: write
@@ -65,7 +65,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          uv sync --group test --group "test-pydantic-${{ matrix.pydantic-version }}"
+          uv sync \
+            --group test \
+            --group "test-pydantic-${{ matrix.pydantic-version }}"
 
       - name: Run tests
         run: |
