@@ -77,7 +77,6 @@ dev = [
     "types-psutil~=7.2.0",
 ]
 docs = [
-    "autodoc_pydantic",
     "furo~=2025.12.19",
     "numpydoc~=1.10.0",
     "packaging~=25.0",

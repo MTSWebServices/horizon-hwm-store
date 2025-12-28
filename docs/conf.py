@@ -51,20 +51,12 @@ extensions = [
     "sphinx_copybutton",
     "sphinx.ext.autosummary",
     "sphinx.ext.autodoc",
-    "sphinxcontrib.autodoc_pydantic",
     "sphinx_favicon",
     "sphinx_toolbox.github",
     "sphinxcontrib.towncrier",  # provides `towncrier-draft-entries` directive
     "sphinx_last_updated_by_git",
 ]
 numpydoc_show_class_members = True
-autodoc_pydantic_model_show_config = False
-autodoc_pydantic_model_show_config_summary = False
-autodoc_pydantic_model_show_config_member = False
-autodoc_pydantic_model_show_json = False
-autodoc_pydantic_model_show_validator_summary = False
-autodoc_pydantic_model_show_validator_members = False
-autodoc_pydantic_field_list_validators = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
