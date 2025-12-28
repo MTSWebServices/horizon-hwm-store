@@ -153,7 +153,7 @@ ignore = [
 
 [tool.mypy]
 plugins = 'pydantic.mypy'
-python_version = 3.8
+python_version = 3.7
 follow_imports = "silent"
 ignore_missing_imports = true
 pretty = true
