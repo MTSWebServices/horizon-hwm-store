@@ -93,8 +93,14 @@ jobs:
   all_done:
     name: Tests done
     runs-on: ubuntu-latest
-    needs: [tests]
+
+    permissions:
+      contents: write
+      checks: write
+      pull-requests: write
+
     if: success() || failure()
+    needs: [tests]
 
     steps:
       - name: Checkout code
