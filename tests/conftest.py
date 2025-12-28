@@ -1,8 +1,8 @@
 import os
 import secrets
-from collections import namedtuple
 from datetime import date, datetime, timezone
 from pathlib import Path
+from typing import NamedTuple
 from unittest.mock import Mock
 
 import etl_entities
@@ -19,7 +19,12 @@ from packaging.version import Version
 
 from horizon_hwm_store import HorizonHWMStore
 
-PreparedDbInfo = namedtuple("PreparedDbInfo", ["full_name", "schema", "table"])
+
+class PreparedDbInfo(NamedTuple):
+    full_name: str
+    schema: str
+    table: str
+
 
 HORIZON_HOST = os.environ.get("HORIZON_HOST")
 HORIZON_PORT = os.environ.get("HORIZON_PORT")
@@ -31,7 +36,7 @@ HORIZON_NAMESPACE = os.environ.get("HORIZON_NAMESPACE")
 HWMS_WITH_VALUE = [
     (
         ColumnIntHWM(
-            name=f"{secrets.token_hex(5)}.{secrets.token_hex(5)}",  # noqa: WPS204
+            name=f"{secrets.token_hex(5)}.{secrets.token_hex(5)}",
             # no source
             expression=secrets.token_hex(5),
             value=10,

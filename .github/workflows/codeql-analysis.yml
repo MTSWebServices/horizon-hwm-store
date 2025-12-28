@@ -56,10 +56,6 @@ jobs:
       - name: Install dependencies
         run: |
           uv sync --group dev
-          uv pip install -U flake8-commas
-
-      - name: Run flake8
-        run: python3 -m flake8 --config setup.cfg .
 
       - name: Run mypy
         run: python3 -m mypy horizon_hwm_store

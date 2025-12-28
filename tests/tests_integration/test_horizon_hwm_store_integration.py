@@ -2,7 +2,7 @@ import os
 
 import pytest
 from horizon.client.auth import LoginPassword
-from requests.exceptions import ConnectionError
+from requests.exceptions import ConnectionError as RequestsConnectionError
 
 from horizon_hwm_store import HorizonHWMStore
 
@@ -38,13 +38,13 @@ def test_horizon_server_unreachable(hwm_new_value):
     hwm, _ = hwm_new_value
     error_msg = "Failed to resolve 'unreachable-host'"
 
-    with pytest.raises(ConnectionError, match=error_msg):
+    with pytest.raises(RequestsConnectionError, match=error_msg):
         store.check()
 
-    with pytest.raises(ConnectionError, match=error_msg):
+    with pytest.raises(RequestsConnectionError, match=error_msg):
         store.get_hwm("some_hwm_name")
 
-    with pytest.raises(ConnectionError, match=error_msg):
+    with pytest.raises(RequestsConnectionError, match=error_msg):
         store.set_hwm(hwm)
 
 

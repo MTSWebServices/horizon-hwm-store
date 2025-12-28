@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 from __future__ import annotations
 
-from typing import Optional, cast
+from typing import Any, Optional, cast
 
 from etl_entities.hwm import HWM, HWMTypeRegistry
 from etl_entities.hwm_store import BaseHWMStore, register_hwm_store_class
@@ -31,8 +31,7 @@ except ImportError:
 
 @register_hwm_store_class("horizon")
 class HorizonHWMStore(BaseHWMStore):
-    """
-    Fetch/store High Water Mark (HWM) values from the Horizon REST API.
+    """Fetch/store High Water Mark (HWM) values from the Horizon REST API.
 
     .. warning::
 
@@ -57,7 +56,6 @@ class HorizonHWMStore(BaseHWMStore):
 
     Examples
     --------
-
     Preparation:
 
     .. code:: python
@@ -159,7 +157,7 @@ class HorizonHWMStore(BaseHWMStore):
     @property
     def client(self) -> HorizonClientSync:
         if not self._client:
-            self._client = HorizonClientSync(  # noqa: WPS601
+            self._client = HorizonClientSync(
                 base_url=str(self.api_url),  # type: ignore[arg-type]
                 auth=self.auth,
                 retry=self.retry,
@@ -184,7 +182,7 @@ class HorizonHWMStore(BaseHWMStore):
         hwm_dict = hwm.serialize()
         hwm_dict["namespace_id"] = namespace_id
 
-        hwm_id = self._get_hwm_id(namespace_id, hwm.name)  # type: ignore
+        hwm_id = self._get_hwm_id(namespace_id, hwm.name)
         if hwm_id is None:
             create_request = HWMCreateRequestV1.parse_obj(hwm_dict)
             response = self.client.create_hwm(create_request)
@@ -196,8 +194,7 @@ class HorizonHWMStore(BaseHWMStore):
         return f"{self.client.base_url}/v1/hwm/{response.id}"
 
     def check(self) -> HorizonHWMStore:
-        """
-        Perform a health check by making a request to the Horizon server.
+        """Perform a health check by making a request to the Horizon server.
 
         This method calls the 'whoami' endpoint of the Horizon client. It's used to verify
         if the backend is accessible and if the provided credentials are correct. The method
@@ -217,40 +214,40 @@ class HorizonHWMStore(BaseHWMStore):
         return self
 
     def force_create_namespace(self) -> HorizonHWMStore:
-        """
-        Create a namespace with name specified in HorizonHWMStore class.
+        """Create a namespace with name specified in HorizonHWMStore class.
 
         Returns
         -------
         HorizonHWMStore
             Self
+
         """
         namespace = self._get_namespace(self.namespace)
         if namespace is None:
             try:
                 namespace = self.client.create_namespace(NamespaceCreateRequestV1(name=self.namespace))
-                self._namespace_id = namespace.id  # noqa: WPS601
+                self._namespace_id = namespace.id
             except EntityAlreadyExistsError:
                 namespace = cast("NamespaceResponseV1", self._get_namespace(self.namespace))
-                self._namespace_id = namespace.id  # noqa: WPS601
+                self._namespace_id = namespace.id
         return self
 
     # LoginPassword, RetryConfig and TimeoutConfig can be inherited from Pydantic v2 BaseModel
     # which is detected by Pydantic v1 as arbitrary type. So we need to parse them manually.
     @validator("auth", pre=True)
-    def _check_auth(cls, value: LoginPassword):
+    def _check_auth(cls, value: Any) -> LoginPassword:  # noqa: N805
         if not isinstance(value, LoginPassword):
             return LoginPassword.parse_obj(value)
         return value
 
     @validator("retry", pre=True)
-    def _check_retry(cls, value: RetryConfig):
+    def _check_retry(cls, value: Any) -> RetryConfig:  # noqa: N805
         if not isinstance(value, RetryConfig):
             return RetryConfig.parse_obj(value)
         return value
 
     @validator("timeout", pre=True)
-    def _check_timeout(cls, value: TimeoutConfig):
+    def _check_timeout(cls, value: Any) -> TimeoutConfig:  # noqa: N805
         if not isinstance(value, TimeoutConfig):
             return TimeoutConfig.parse_obj(value)
         return value
@@ -260,8 +257,7 @@ class HorizonHWMStore(BaseHWMStore):
         return namespaces[0] if namespaces else None
 
     def _get_namespace_id(self) -> int:
-        """
-        Fetch the ID of the namespace. Raises an exception if the namespace doesn't exist.
+        """Fetch the ID of the namespace. Raises an exception if the namespace doesn't exist.
 
         Returns
         -------
@@ -272,23 +268,26 @@ class HorizonHWMStore(BaseHWMStore):
         ------
         RuntimeError
             If the namespace does not exist.
+
         """
         if self._namespace_id is not None:
             return self._namespace_id
 
         namespace = self._get_namespace(self.namespace)
         if namespace is None:
-            raise RuntimeError(
+            msg = (
                 f"Namespace {self.namespace!r} not found. "
-                "Please create it before using by calling .force_create_namespace() method.",
+                "Please create it before using by calling .force_create_namespace() method."
+            )
+            raise RuntimeError(
+                msg,
             )
 
-        self._namespace_id = namespace.id  # noqa: WPS601
+        self._namespace_id = namespace.id
         return self._namespace_id
 
     def _get_hwm_id(self, namespace_id: int, hwm_name: str) -> Optional[int]:
-        """
-        Fetch the ID of the HWM within the given namespace.
+        """Fetch the ID of the HWM within the given namespace.
 
         Parameters
         ----------
@@ -301,6 +300,7 @@ class HorizonHWMStore(BaseHWMStore):
         -------
         Optional[int]
             The ID of the HWM, or None if it does not exist.
+
         """
         hwm_query = HWMPaginateQueryV1(namespace_id=namespace_id, name=hwm_name)
         hwms = self.client.paginate_hwm(hwm_query).items

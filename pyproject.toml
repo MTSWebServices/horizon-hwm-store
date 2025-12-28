@@ -75,7 +75,6 @@ dev = [
     "mypy~=1.19.1",
     "pre-commit~=4.5.1",
     "types-psutil~=7.2.0",
-    "wemake-python-styleguide~=1.5.0",
 ]
 docs = [
     "autodoc_pydantic",
@@ -131,6 +130,27 @@ exclude_lines = [
 target-version = "py37"
 line-length = 120
 extend-exclude = ["docs/", "Makefile"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D",
+    "ANN",
+    "FIX002",
+    "TD",
+    "UP006",
+    "UP007",
+    "UP045",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "S",
+    "ANN",
+    "D",
+    "ARG",
+    "DTZ",
+]
 
 [tool.mypy]
 plugins = 'pydantic.mypy'

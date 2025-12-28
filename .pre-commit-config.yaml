@@ -59,16 +59,6 @@ repos:
       - id: rst-inline-touching-normal
       - id: text-unicode-replacement-char
 
-  - repo: https://github.com/pycqa/bandit
-    rev: 1.9.2
-    hooks:
-      - id: bandit
-        args:
-          - --aggregate=file
-          - -iii
-          - -ll
-        require_serial: true
-
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.9.18
     hooks:
@@ -78,6 +68,8 @@ repos:
     rev: v0.14.10
     hooks:
       - id: ruff-format
+      - id: ruff
+        args: [--fix]
 
   - repo: meta
     hooks:
@@ -86,13 +78,6 @@ repos:
 
   - repo: local
     hooks:
-      - id: flake8
-        name: flake8
-        entry: python3 -m flake8 .
-        language: system
-        types: [python]
-        pass_filenames: false
-
       - id: mypy
         name: mypy
         entry: python3 -m mypy horizon_hwm_store
@@ -102,7 +87,6 @@ repos:
 
 ci:
   skip:
-    - flake8 # checked with Github Actions
     - mypy # checked with Github Actions
     - docker-compose-check # cannot run on pre-commit.ci
     - chmod # failing in pre-commit.ci
