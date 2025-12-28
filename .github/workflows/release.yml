@@ -28,6 +28,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Patch version template
+        # Due to change above, git stage area is dirty, so we need to patch the template
+        run: sed -i 's#dirty_template = ".*"#dirty_template = "{tag}"#' pyproject.toml
+
       - name: Set up Python ${{ env.DEFAULT_PYTHON }}
         id: python
         uses: actions/setup-python@v6
