@@ -73,7 +73,7 @@ jobs:
         run: |
           mkdir reports/ || echo "Directory exists"
           source .env.local
-          ./run_tests.sh
+          coverage run -m pytest --junitxml=reports/junit/python${{ matrix.python-version }}-pydantic${{ matrix.pydantic-version }}.xml
 
       - name: Upload coverage results
         uses: actions/upload-artifact@v6
@@ -129,7 +129,9 @@ jobs:
           merge-multiple: true
 
       - name: Generate coverate reports
-        run: ./combine_coverage.sh
+        run: |
+          coverage combine
+          coverage xml -o reports/coverage.xml -i
 
       - name: Coverage comment
         id: coverage
