@@ -54,7 +54,6 @@ Create virtualenv and install dependencies:
     pip install -U wheel
     pip install -U pip setuptools
     pip install -U \
-        -r requirements.txt \
         -r requirements-dev.txt
 
 Install pre-commit hooks:
@@ -101,13 +100,13 @@ Run tests:
 
 .. code:: bash
 
-    ./run_tests.sh
+    pytest
 
 You can pass additional arguments, they will be passed to pytest:
 
 .. code:: bash
 
-    ./run_tests.sh -k sometest -lsx -vvvv --log-cli-level=INFO
+    pytest -k sometest -lsx -vvvv --log-cli-level=INFO
 
 Stop all containers and remove created volumes:
 

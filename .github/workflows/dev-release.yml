@@ -37,10 +37,10 @@ jobs:
           python-version: ${{ env.DEFAULT_PYTHON }}
 
       - name: Upgrade pip
-        run: python -m pip install --upgrade pip setuptools wheel
+        run: python -m pip install build
 
       - name: Build package
-        run: python setup.py sdist bdist_wheel
+        run: python -m build
 
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@release/v1

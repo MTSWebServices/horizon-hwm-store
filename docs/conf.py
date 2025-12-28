@@ -12,7 +12,6 @@
 #
 
 import os
-import subprocess
 import sys
 from pathlib import Path
 
@@ -20,7 +19,7 @@ from packaging import version as Version
 
 PROJECT_ROOT_DIR = Path(__file__).parent.parent.resolve()
 
-sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
+sys.path.insert(0, os.fspath(PROJECT_ROOT_DIR))
 
 
 # -- Project information -----------------------------------------------------
@@ -35,7 +34,9 @@ author = "MWS Data Bridge"
 #
 # The short X.Y version.
 
-ver = Version.parse(subprocess.check_output("python ../setup.py --version", shell=True, text=True).strip())
+VERSION_FILE = PROJECT_ROOT_DIR / "etl_entities" / "VERSION"
+ver = Version.parse(VERSION_FILE.read_text())
+
 version = ver.base_version
 # The full version, including alpha/beta/rc tags.
 release = ver.public

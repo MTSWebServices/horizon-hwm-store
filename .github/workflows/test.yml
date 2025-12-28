@@ -66,22 +66,12 @@ jobs:
             ${{ runner.os }}-python-${{ matrix.python-version }}-pydantic-${{ matrix.pydantic-version}}-tests-
             ${{ runner.os }}-python-
 
-      - name: Upgrade pip
-        run: python -m pip install --upgrade pip setuptools wheel
-
       - name: Install dependencies
-        run: pip install -I -r requirements.txt -r requirements-test.txt "pydantic==${{ matrix.pydantic-version }}.*"
-
-      - name: Build package
-        run: |
-          python setup.py --version
-          python setup.py bdist_wheel sdist
+        run: pip install -e .-r requirements-test.txt "pydantic==${{ matrix.pydantic-version }}.*"
 
       - name: Run tests
         run: |
           mkdir reports/ || echo "Directory exists"
-          # required to register package in etl-entities
-          pip install -e . --no-build-isolation
           source .env.local
           ./run_tests.sh
 

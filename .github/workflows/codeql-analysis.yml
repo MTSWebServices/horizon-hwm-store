@@ -45,19 +45,16 @@ jobs:
             ${{ runner.os }}-python-${{ env.DEFAULT_PYTHON }}-codeql-
             ${{ runner.os }}-python-
 
-      - name: Upgrade pip
-        run: python -m pip install --upgrade pip setuptools wheel
-
       - name: Install dependencies
         run: |
-          pip install -I -r requirements.txt -r requirements-dev.txt
+          pip install -e . -r requirements-dev.txt
           pip install -U flake8-commas
 
       - name: Run flake8
         run: python3 -m flake8 --config setup.cfg .
 
       - name: Run mypy
-        run: python3 -m mypy --config-file setup.cfg horizon_hwm_store
+        run: python3 -m mypy horizon_hwm_store
 
   codeql:
     name: CodeQL

@@ -13,6 +13,6 @@ build:
 
 python:
   install:
+    - path: .
     - requirements: requirements-docs.txt
     - requirements: requirements-dev.txt
-    - requirements: requirements.txt
