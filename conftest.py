@@ -168,7 +168,6 @@ def hwm_store():
 
 @pytest.fixture(scope="module")
 def ensure_namespace():
-
     HorizonHWMStore(
         api_url=HORIZON_URL,
         auth=LoginPassword(login=HORIZON_USER, password=HORIZON_PASSWORD),
