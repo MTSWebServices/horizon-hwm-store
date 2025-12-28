@@ -34,7 +34,7 @@ author = "MWS Data Bridge"
 #
 # The short X.Y version.
 
-VERSION_FILE = PROJECT_ROOT_DIR / "etl_entities" / "VERSION"
+VERSION_FILE = PROJECT_ROOT_DIR / "horizon_hwm_store" / "VERSION"
 ver = Version.parse(VERSION_FILE.read_text())
 
 version = ver.base_version

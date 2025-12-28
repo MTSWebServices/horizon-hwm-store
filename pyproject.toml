@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools-git-versioning]
 enabled = true
-version_file = "etl_entities/VERSION"
+version_file = "horizon_hwm_store/VERSION"
 count_commits_from_version_file = true
 dev_template = "{tag}.dev{env:GITHUB_RUN_ID:{ccount}}+git.{sha}"
 dirty_template = "{tag}.dev{env:GITHUB_RUN_ID:{ccount}}+git.{sha}.dirty"
@@ -56,7 +56,7 @@ horizon-hwm-store = "horizon_hwm_store"
 horizon-hwm-store = "horizon_hwm_store"
 
 [tool.setuptools.packages.find]
-include = ["etl_entities*"]
+include = ["horizon_hwm_store*"]
 exclude = ["docs", "tests"]
 
 [tool.setuptools.package-data]
@@ -111,7 +111,7 @@ cache_dir = ".pytest_cache"
 log_cli_level = "INFO"
 
 [tool.coverage.paths]
-source = ["etl_entities"]
+source = ["horizon_hwm_store"]
 
 [tool.coverage.run]
 branch = true
@@ -162,8 +162,8 @@ show_error_codes = true
 strict_optional = true
 
 [tool.towncrier]
-name = "ETL Entities"
-package = "etl_entities"
+name = "Horizon HWM Store"
+package = "horizon_hwm_store"
 filename = "docs/changelog/NEXT_RELEASE.rst"
 directory = "docs/changelog/next_release/"
 title_format = "{version} ({project_date})"
