@@ -45,10 +45,18 @@ jobs:
             ${{ runner.os }}-python-${{ env.DEFAULT_PYTHON }}-codeql-
             ${{ runner.os }}-python-
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          activate-environment: 'true'
+          enable-cache: 'false'
+
+      # no uv cache here because fresh install takes about 1 second
+
       - name: Install dependencies
         run: |
-          pip install -e . -r requirements-dev.txt
-          pip install -U flake8-commas
+          uv sync --group dev
+          uv pip install -U flake8-commas
 
       - name: Run flake8
         run: python3 -m flake8 --config setup.cfg .

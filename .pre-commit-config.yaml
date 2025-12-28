@@ -8,8 +8,6 @@ repos:
       - id: check-merge-conflict
       - id: check-toml
       - id: check-vcs-permalinks
-      - id: requirements-txt-fixer
-        files: ^(requirements.*\.txt)$
       - id: end-of-file-fixer
         exclude: ^.*/VERSION$
       - id: fix-byte-order-marker
@@ -43,7 +41,7 @@ repos:
     rev: v2.15.0
     hooks:
       - id: pretty-format-yaml
-        args: [--autofix, --indent, '2', --offset, '2']
+        args: [--autofix, --indent, '2', --preserve-quotes, --offset, '2']
 
   - repo: https://github.com/IamTheFij/docker-pre-commit
     rev: v3.0.1
