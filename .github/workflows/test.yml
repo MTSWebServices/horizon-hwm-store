@@ -76,7 +76,7 @@ jobs:
           uv run coverage run -m pytest --junitxml=reports/junit/python${{ matrix.python-version }}-pydantic${{ matrix.pydantic-version }}.xml
 
       - name: Upload coverage results
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: coverage-python-${{ matrix.python-version }}-pydantic-${{ matrix.pydantic-version }}-os-${{ matrix.os }}
           path: reports/*
@@ -112,7 +112,7 @@ jobs:
           python-version: ${{ env.DEFAULT_PYTHON }}
 
       - name: Download all coverage reports
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           path: reports/
           pattern: coverage-*
