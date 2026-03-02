@@ -8,13 +8,13 @@ Horizon HWM Store
 
 .. |Repo Status| image:: https://www.repostatus.org/badges/latest/active.svg
     :alt: Repo status - Active
-    :target: https://github.com/MobileTeleSystems/horizon-hwm-store
+    :target: https://github.com/MTSWebServices/horizon-hwm-store
 .. |PyPI Latest Release| image:: https://img.shields.io/pypi/v/horizon-hwm-store
     :alt: PyPI - Latest Release
     :target: https://pypi.org/project/horizon-hwm-store/
 .. |PyPI License| image:: https://img.shields.io/pypi/l/horizon-hwm-store.svg
     :alt: PyPI - License
-    :target: https://github.com/MobileTeleSystems/horizon-hwm-store/blob/develop/LICENSE.txt
+    :target: https://github.com/MTSWebServices/horizon-hwm-store/blob/develop/LICENSE.txt
 .. |PyPI Python Version| image:: https://img.shields.io/pypi/pyversions/horizon-hwm-store.svg
     :alt: PyPI - Python Version
     :target: https://pypi.org/project/horizon-hwm-store/
@@ -24,15 +24,15 @@ Horizon HWM Store
 .. |Documentation| image:: https://readthedocs.org/projects/horizon-hwm-store/badge/?version=stable
     :alt: Documentation - ReadTheDocs
     :target: https://horizon-hwm-store.readthedocs.io/
-.. |CI Status| image:: https://github.com/MobileTeleSystems/horizon-hwm-store/workflows/Tests/badge.svg
+.. |CI Status| image:: https://github.com/MTSWebServices/horizon-hwm-store/workflows/Tests/badge.svg
     :alt: Github Actions - latest CI build status
-    :target: https://github.com/MobileTeleSystems/horizon-hwm-store/actions
+    :target: https://github.com/MTSWebServices/horizon-hwm-store/actions
 .. |Test Coverage| image:: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/
     MTSOnGithub/03e73a82ecc4709934540ce8201cc3b4/raw/horizon-hwm-store_badge.json
-    :target: https://github.com/MobileTeleSystems/horizon-hwm-store/actions
-.. |pre-commit.ci Status| image:: https://results.pre-commit.ci/badge/github/MobileTeleSystems/horizon-hwm-store/develop.svg
+    :target: https://github.com/MTSWebServices/horizon-hwm-store/actions
+.. |pre-commit.ci Status| image:: https://results.pre-commit.ci/badge/github/MTSWebServices/horizon-hwm-store/develop.svg
     :alt: pre-commit.ci - status
-    :target: https://results.pre-commit.ci/latest/github/MobileTeleSystems/horizon-hwm-store/develop
+    :target: https://results.pre-commit.ci/latest/github/MTSWebServices/horizon-hwm-store/develop
 
 ``horizon-hwm-store`` is a Python library which implements `etl-entities' BaseHWMStore <https://etl-entities.readthedocs.io/en/stable/hwm_store/base_hwm_store.html>`_
 interface for `Horizon <https://data-horizon.readthedocs.io/>`_.

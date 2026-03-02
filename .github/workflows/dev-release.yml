@@ -14,7 +14,7 @@ jobs:
   wait-code-analysis:
     name: Dev release package
     runs-on: ubuntu-latest
-    if: github.repository == 'MobileTeleSystems/horizon-hwm-store'  # prevent running on forks
+    if: github.repository == 'MTSWebServices/horizon-hwm-store'  # prevent running on forks
 
     environment:
       name: test-pypi

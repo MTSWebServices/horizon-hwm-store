@@ -44,11 +44,11 @@ file = "README.rst"
 content-type = "text/x-rst"
 
 [project.urls]
-Homepage = "https://github.com/MobileTeleSystems/horizon-hwm-store"
+Homepage = "https://github.com/MTSWebServices/horizon-hwm-store"
 Documentation = "https://horizon-hwm-store.readthedocs.io/"
-Source = "https://github.com/MobileTeleSystems/horizon-hwm-store"
-"CI/CD" = "https://github.com/MobileTeleSystems/horizon-hwm-store/actions"
-Tracker = "https://github.com/MobileTeleSystems/horizon-hwm-store/issues"
+Source = "https://github.com/MTSWebServices/horizon-hwm-store"
+"CI/CD" = "https://github.com/MTSWebServices/horizon-hwm-store/actions"
+Tracker = "https://github.com/MTSWebServices/horizon-hwm-store/issues"
 
 [project.entry-points."etl_entities.plugins"]
 horizon-hwm-store = "horizon_hwm_store"
