@@ -94,7 +94,7 @@ repos:
     hooks:
       - id: ruff-format
         priority: 7
-      - id: ruff
+      - id: ruff-check
         args: [--fix]
         priority: 8
 
