@@ -98,7 +98,7 @@ version = "1.1.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "domdf-python-tools", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "idna", version = "3.13", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "idna", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e5/4c/4f108cfd06923bd897bf992a6ecb6fb122646ee7af94d7f9a64abd071d4c/apeye_core-1.1.5.tar.gz", hash = "sha256:5de72ed3d00cc9b20fea55e54b7ab8f5ef8500eb33a5368bc162a5585e238a55", size = 96511, upload-time = "2024-01-30T17:45:48.727Z" }
 wheels = [
@@ -1223,16 +1223,51 @@ wheels = [
 
 [[package]]
 name = "data-horizon"
-version = "1.1.3"
+version = "1.0.0"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.9.*'",
+    "python_full_version == '3.8.*'",
+    "python_full_version < '3.8'",
+]
 dependencies = [
-    { name = "pydantic", version = "1.10.26", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'group-17-horizon-hwm-store-test-pydantic-1'" },
+    { name = "pydantic", version = "1.10.26", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version < '3.10' and extra == 'group-17-horizon-hwm-store-test-pydantic-1') or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "pydantic", version = "2.5.3", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version < '3.8' and extra != 'group-17-horizon-hwm-store-test-pydantic-1') or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "pydantic", version = "2.10.6", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version == '3.8.*' and extra != 'group-17-horizon-hwm-store-test-pydantic-1') or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "pydantic", version = "2.13.3", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.9' and extra != 'group-17-horizon-hwm-store-test-pydantic-1') or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "pydantic", version = "2.13.3", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version == '3.9.*' and extra != 'group-17-horizon-hwm-store-test-pydantic-1') or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "python-jose", version = "3.4.0", source = { registry = "https://pypi.org/simple" }, extra = ["cryptography"], marker = "python_full_version < '3.9' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "python-jose", version = "3.5.0", source = { registry = "https://pypi.org/simple" }, extra = ["cryptography"], marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "typing-extensions", version = "4.7.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "typing-extensions", version = "4.13.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "typing-extensions", version = "4.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "typing-extensions", version = "4.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/50/0b/77485f83f59b8d523b82626ecddadc89e18ecf0f855de9e6122c9ffad03a/data_horizon-1.0.0.tar.gz", hash = "sha256:8f0507dbd45bd3e1047e02496291335e54e9facc6cb2ac92f34494f4b682e8aa", size = 63083, upload-time = "2024-06-10T08:50:25.059Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5c/e0/5b2855d89a2bc83a1fe73ae7e53bac4f67483ce02d698dfb66548d7f0ade/data_horizon-1.0.0-py3-none-any.whl", hash = "sha256:bf930ced98b204e4fd6a0548d22850a1f7054d325e54ade5ad9a3ea3c8af8b1b", size = 120334, upload-time = "2024-06-10T08:50:23.629Z" },
+]
+
+[package.optional-dependencies]
+client-sync = [
+    { name = "authlib", version = "1.2.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "authlib", version = "1.3.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "authlib", version = "1.6.11", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "requests", version = "2.15.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+]
+
+[[package]]
+name = "data-horizon"
+version = "1.1.3"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.15'",
+    "python_full_version >= '3.13' and python_full_version < '3.15'",
+    "python_full_version == '3.12.*'",
+    "python_full_version >= '3.10' and python_full_version < '3.12'",
+]
+dependencies = [
+    { name = "pydantic", version = "1.10.26", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.10' and extra == 'group-17-horizon-hwm-store-test-pydantic-1') or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "pydantic", version = "2.13.3", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.10' and extra != 'group-17-horizon-hwm-store-test-pydantic-1') or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "typing-extensions", version = "4.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/10/03/23ecdf5539179216c08b29aa5d0f8102f20a92e6e7c91ef48c65233959e0/data_horizon-1.1.3.tar.gz", hash = "sha256:4dbeb79d900200ec88a032d1a0fd83336fc3942d23cc092d1267bd00208e0748", size = 59782, upload-time = "2025-10-29T15:42:40.354Z" }
 wheels = [
@@ -1241,20 +1276,10 @@ wheels = [
 
 [package.optional-dependencies]
 client-sync = [
-    { name = "authlib", version = "1.2.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "authlib", version = "1.3.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "authlib", version = "1.6.11", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "authlib", version = "1.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "cffi", version = "1.15.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "cffi", version = "1.17.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "cffi", version = "2.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "requests", version = "2.31.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "requests", version = "2.32.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "requests", version = "2.32.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "cffi", version = "2.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "requests", version = "2.33.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "urllib3", version = "2.0.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "urllib3", version = "2.2.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "urllib3", version = "2.6.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "urllib3", marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
 ]
 
 [[package]]
@@ -1290,6 +1315,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/36/8b/ab2d8a292bba8fe3135cacc8bfd3576710a14b8f2d0a8cde19130d5c9d21/domdf_python_tools-3.10.0.tar.gz", hash = "sha256:2ae308d2f4f1e9145f5f4ba57f840fbfd1c2983ee26e4824347789649d3ae298", size = 100458, upload-time = "2025-02-12T17:34:05.747Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/5b/11/208f72084084d3f6a2ed5ebfdfc846692c3f7ad6dce65e400194924f7eed/domdf_python_tools-3.10.0-py3-none-any.whl", hash = "sha256:5e71c1be71bbcc1f881d690c8984b60e64298ec256903b3147f068bc33090c36", size = 126860, upload-time = "2025-02-12T17:34:04.093Z" },
+]
+
+[[package]]
+name = "ecdsa"
+version = "0.19.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six", marker = "python_full_version < '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/25/ca/8de7744cb3bc966c85430ca2d0fcaeea872507c6a4cf6e007f7fe269ed9d/ecdsa-0.19.2.tar.gz", hash = "sha256:62635b0ac1ca2e027f82122b5b81cb706edc38cd91c63dda28e4f3455a2bf930", size = 202432, upload-time = "2026-03-26T09:58:17.675Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/51/79/119091c98e2bf49e24ed9f3ae69f816d715d2904aefa6a2baa039a2ba0b0/ecdsa-0.19.2-py2.py3-none-any.whl", hash = "sha256:840f5dc5e375c68f36c1a7a5b9caad28f95daa65185c9253c0c08dd952bb7399", size = 150818, upload-time = "2026-03-26T09:58:15.808Z" },
 ]
 
 [[package]]
@@ -1456,7 +1493,8 @@ wheels = [
 name = "horizon-hwm-store"
 source = { editable = "." }
 dependencies = [
-    { name = "data-horizon", extra = ["client-sync"] },
+    { name = "data-horizon", version = "1.0.0", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "python_full_version < '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "data-horizon", version = "1.1.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "etl-entities" },
 ]
 
@@ -1547,28 +1585,8 @@ wheels = [
 
 [[package]]
 name = "idna"
-version = "3.10"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.8'",
-]
-sdist = { url = "https://files.pythonhosted.org/packages/f1/70/7703c29685631f5a7590aa73f1f1d3fa9a380e654b86af429e0934a32f7d/idna-3.10.tar.gz", hash = "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9", size = 190490, upload-time = "2024-09-15T18:07:39.745Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3", size = 70442, upload-time = "2024-09-15T18:07:37.964Z" },
-]
-
-[[package]]
-name = "idna"
 version = "3.13"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.15'",
-    "python_full_version >= '3.13' and python_full_version < '3.15'",
-    "python_full_version == '3.12.*'",
-    "python_full_version >= '3.10' and python_full_version < '3.12'",
-    "python_full_version == '3.9.*'",
-    "python_full_version == '3.8.*'",
-]
 sdist = { url = "https://files.pythonhosted.org/packages/ce/cc/762dfb036166873f0059f3b7de4565e1b5bc3d6f28a414c13da27e442f99/idna-3.13.tar.gz", hash = "sha256:585ea8fe5d69b9181ec1afba340451fba6ba764af97026f92a91d4eef164a242", size = 194210, upload-time = "2026-04-22T16:42:42.314Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/5d/13/ad7d7ca3808a898b4612b6fe93cde56b53f3034dcde235acb1f0e1df24c6/idna-3.13-py3-none-any.whl", hash = "sha256:892ea0cde124a99ce773decba204c5552b69c3c67ffd5f232eb7696135bc8bb3", size = 68629, upload-time = "2026-04-22T16:42:40.909Z" },
@@ -2226,6 +2244,31 @@ wheels = [
 ]
 
 [[package]]
+name = "pyasn1"
+version = "0.4.8"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.8.*'",
+    "python_full_version < '3.8'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a4/db/fffec68299e6d7bad3d504147f9094830b704527a7fc098b721d38cc7fa7/pyasn1-0.4.8.tar.gz", hash = "sha256:aef77c9fb94a3ac588e87841208bdec464471d9871bd5050a287cc9a475cd0ba", size = 146820, upload-time = "2019-11-16T17:27:38.772Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/62/1e/a94a8d635fa3ce4cfc7f506003548d0a2447ae76fd5ca53932970fe3053f/pyasn1-0.4.8-py2.py3-none-any.whl", hash = "sha256:39c7e2ec30515947ff4e87fb6f456dfc6e84857d34be479c9d4a4ba4bf46aa5d", size = 77145, upload-time = "2019-11-16T17:27:11.07Z" },
+]
+
+[[package]]
+name = "pyasn1"
+version = "0.6.3"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.9.*'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5c/5f/6583902b6f79b399c9c40674ac384fd9cd77805f9e6205075f828ef11fb2/pyasn1-0.6.3.tar.gz", hash = "sha256:697a8ecd6d98891189184ca1fa05d1bb00e2f84b5977c481452050549c8a72cf", size = 148685, upload-time = "2026-03-17T01:06:53.382Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5d/a0/7d793dce3fa811fe047d6ae2431c672364b462850c6235ae306c0efd025f/pyasn1-0.6.3-py3-none-any.whl", hash = "sha256:a80184d120f0864a52a073acc6fc642847d0be408e7c7252f31390c0f4eadcde", size = 83997, upload-time = "2026-03-17T01:06:52.036Z" },
+]
+
+[[package]]
 name = "pycparser"
 version = "2.21"
 source = { registry = "https://pypi.org/simple" }
@@ -2844,6 +2887,52 @@ wheels = [
 ]
 
 [[package]]
+name = "python-jose"
+version = "3.4.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.8.*'",
+    "python_full_version < '3.8'",
+]
+dependencies = [
+    { name = "ecdsa", marker = "python_full_version < '3.9' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "pyasn1", version = "0.4.8", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "rsa", marker = "python_full_version < '3.9' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8e/a0/c49687cf40cb6128ea4e0559855aff92cd5ebd1a60a31c08526818c0e51e/python-jose-3.4.0.tar.gz", hash = "sha256:9a9a40f418ced8ecaf7e3b28d69887ceaa76adad3bcaa6dae0d9e596fec1d680", size = 92145, upload-time = "2025-02-18T17:26:41.985Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/63/b0/2586ea6b6fd57a994ece0b56418cbe93fff0efb85e2c9eb6b0caf24a4e37/python_jose-3.4.0-py2.py3-none-any.whl", hash = "sha256:9c9f616819652d109bd889ecd1e15e9a162b9b94d682534c9c2146092945b78f", size = 34616, upload-time = "2025-02-18T17:26:40.826Z" },
+]
+
+[package.optional-dependencies]
+cryptography = [
+    { name = "cryptography", version = "45.0.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "cryptography", version = "46.0.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+]
+
+[[package]]
+name = "python-jose"
+version = "3.5.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.9.*'",
+]
+dependencies = [
+    { name = "ecdsa", marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "pyasn1", version = "0.6.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "rsa", marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c6/77/3a1c9039db7124eb039772b935f2244fbb73fc8ee65b9acf2375da1c07bf/python_jose-3.5.0.tar.gz", hash = "sha256:fb4eaa44dbeb1c26dcc69e4bd7ec54a1cb8dd64d3b4d81ef08d90ff453f2b01b", size = 92726, upload-time = "2025-05-28T17:31:54.288Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d9/c3/0bd11992072e6a1c513b16500a5d07f91a24017c5909b02c72c62d7ad024/python_jose-3.5.0-py2.py3-none-any.whl", hash = "sha256:abd1202f23d34dfad2c3d28cb8617b90acf34132c7afd60abd0b0b7d3cb55771", size = 34624, upload-time = "2025-05-28T17:31:52.802Z" },
+]
+
+[package.optional-dependencies]
+cryptography = [
+    { name = "cryptography", version = "46.0.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+]
+
+[[package]]
 name = "pyyaml"
 version = "6.0.1"
 source = { registry = "https://pypi.org/simple" }
@@ -2988,56 +3077,16 @@ wheels = [
 
 [[package]]
 name = "requests"
-version = "2.31.0"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.8'",
-]
-dependencies = [
-    { name = "certifi", marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "charset-normalizer", marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "idna", version = "3.10", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "urllib3", version = "2.0.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.8' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz", hash = "sha256:942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1", size = 110794, upload-time = "2023-05-22T15:12:44.175Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl", hash = "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f", size = 62574, upload-time = "2023-05-22T15:12:42.313Z" },
-]
-
-[[package]]
-name = "requests"
-version = "2.32.4"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version == '3.8.*'",
-]
-dependencies = [
-    { name = "certifi", marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "charset-normalizer", marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "idna", version = "3.13", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "urllib3", version = "2.2.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.8.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/e1/0a/929373653770d8a0d7ea76c37de6e41f11eb07559b103b1c02cafb3f7cf8/requests-2.32.4.tar.gz", hash = "sha256:27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422", size = 135258, upload-time = "2025-06-09T16:43:07.34Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/7c/e4/56027c4a6b4ae70ca9de302488c5ca95ad4a39e190093d6c1a8ace08341b/requests-2.32.4-py3-none-any.whl", hash = "sha256:27babd3cda2a6d50b30443204ee89830707d396671944c998b5975b031ac2b2c", size = 64847, upload-time = "2025-06-09T16:43:05.728Z" },
-]
-
-[[package]]
-name = "requests"
-version = "2.32.5"
+version = "2.15.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "python_full_version == '3.9.*'",
+    "python_full_version == '3.8.*'",
+    "python_full_version < '3.8'",
 ]
-dependencies = [
-    { name = "certifi", marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "charset-normalizer", marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "idna", version = "3.13", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "urllib3", version = "2.6.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz", hash = "sha256:dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf", size = 134517, upload-time = "2025-08-18T20:46:02.573Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6d/ed/3adebdc29ca33f11bca00c38c72125cd4a51091e13685375ba4426fb59dc/requests-2.15.1.tar.gz", hash = "sha256:e5659b9315a0610505e050bb7190bf6fa2ccee1ac295f2b760ef9d8a03ebbb2e", size = 548172, upload-time = "2017-05-27T02:14:22.414Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl", hash = "sha256:2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6", size = 64738, upload-time = "2025-08-18T20:46:00.542Z" },
+    { url = "https://files.pythonhosted.org/packages/fa/a5/e04c4607dc96e3e6b22dfa13ba8776c64bb65cb97ab90f05a3ee14096a0a/requests-2.15.1-py2.py3-none-any.whl", hash = "sha256:ff753b2196cd18b1bbeddc9dcd5c864056599f7a7d9a4fb5677e723efa2b7fb9", size = 558730, upload-time = "2017-05-27T02:14:19.048Z" },
 ]
 
 [[package]]
@@ -3053,8 +3102,8 @@ resolution-markers = [
 dependencies = [
     { name = "certifi", marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "charset-normalizer", marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "idna", version = "3.13", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "urllib3", version = "2.6.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "idna", marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "urllib3", marker = "python_full_version >= '3.10' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/5f/a4/98b9c7c6428a668bf7e42ebb7c79d576a1c3c1e3ae2d47e674b468388871/requests-2.33.1.tar.gz", hash = "sha256:18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517", size = 134120, upload-time = "2026-03-30T16:09:15.531Z" }
 wheels = [
@@ -3089,6 +3138,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/cb/b5/de96fca640f4f656eb79bbee0e79aeec52e3e0e359f8a3e6a0d366378b64/roman_numerals_py-4.1.0.tar.gz", hash = "sha256:f5d7b2b4ca52dd855ef7ab8eb3590f428c0b1ea480736ce32b01fef2a5f8daf9", size = 4274, upload-time = "2025-12-17T18:25:41.153Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/27/2c/daca29684cbe9fd4bc711f8246da3c10adca1ccc4d24436b17572eb2590e/roman_numerals_py-4.1.0-py3-none-any.whl", hash = "sha256:553114c1167141c1283a51743759723ecd05604a1b6b507225e91dc1a6df0780", size = 4547, upload-time = "2025-12-17T18:25:40.136Z" },
+]
+
+[[package]]
+name = "rsa"
+version = "4.9.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyasn1", version = "0.4.8", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "pyasn1", version = "0.6.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/da/8a/22b7beea3ee0d44b1916c0c1cb0ee3af23b700b6da9f04991899d0c555d4/rsa-4.9.1.tar.gz", hash = "sha256:e7bdbfdb5497da4c07dfd35530e1a902659db6ff241e39d9953cad06ebd0ae75", size = 29034, upload-time = "2025-04-16T09:51:18.218Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/64/8d/0133e4eb4beed9e425d9a98ed6e081a55d195481b7632472be1af08d2f6b/rsa-4.9.1-py3-none-any.whl", hash = "sha256:68635866661c6836b8d39430f97a996acbd61bfa49406748ea243539fe239762", size = 34696, upload-time = "2025-04-16T09:51:17.142Z" },
 ]
 
 [[package]]
@@ -3332,12 +3394,12 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "certifi", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "docutils", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "idna", version = "3.13", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "idna", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "jinja2", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "pygments", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "requests", version = "2.33.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
     { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
-    { name = "urllib3", version = "2.6.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
+    { name = "urllib3", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-pydantic-1' and extra == 'group-17-horizon-hwm-store-test-pydantic-2')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/d0/a3/91293c0e0f0b76d0697ba7a41541929ca3f5457671d008bd84a9bde17e21/sphinx_prompt-1.10.2.tar.gz", hash = "sha256:47b592ba75caebd044b0eddf7a5a1b6e0aef6df587b034377cd101a999b686ba", size = 5566, upload-time = "2025-11-28T09:23:18.057Z" }
 wheels = [
@@ -3619,42 +3681,11 @@ wheels = [
 
 [[package]]
 name = "urllib3"
-version = "2.0.7"
+version = "2.7.0"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version < '3.8'",
-]
-sdist = { url = "https://files.pythonhosted.org/packages/af/47/b215df9f71b4fdba1025fc05a77db2ad243fa0926755a52c5e71659f4e3c/urllib3-2.0.7.tar.gz", hash = "sha256:c97dfde1f7bd43a71c8d2a58e369e9b2bf692d1334ea9f9cae55add7d0dd0f84", size = 282546, upload-time = "2023-10-17T17:46:50.542Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz", hash = "sha256:231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c", size = 433602, upload-time = "2026-05-07T16:13:18.596Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d2/b2/b157855192a68541a91ba7b2bbcb91f1b4faa51f8bae38d8005c034be524/urllib3-2.0.7-py3-none-any.whl", hash = "sha256:fdb6d215c776278489906c2f8916e6e7d4f5a9b602ccbcfdf7f016fc8da0596e", size = 124213, upload-time = "2023-10-17T17:46:48.538Z" },
-]
-
-[[package]]
-name = "urllib3"
-version = "2.2.3"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version == '3.8.*'",
-]
-sdist = { url = "https://files.pythonhosted.org/packages/ed/63/22ba4ebfe7430b76388e7cd448d5478814d3032121827c12a2cc287e2260/urllib3-2.2.3.tar.gz", hash = "sha256:e7d814a81dad81e6caf2ec9fdedb284ecc9c73076b62654547cc64ccdcae26e9", size = 300677, upload-time = "2024-09-12T10:52:18.401Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ce/d9/5f4c13cecde62396b0d3fe530a50ccea91e7dfc1ccf0e09c228841bb5ba8/urllib3-2.2.3-py3-none-any.whl", hash = "sha256:ca899ca043dcb1bafa3e262d73aa25c465bfb49e0bd9dd5d59f1d0acba2f8fac", size = 126338, upload-time = "2024-09-12T10:52:16.589Z" },
-]
-
-[[package]]
-name = "urllib3"
-version = "2.6.3"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.15'",
-    "python_full_version >= '3.13' and python_full_version < '3.15'",
-    "python_full_version == '3.12.*'",
-    "python_full_version >= '3.10' and python_full_version < '3.12'",
-    "python_full_version == '3.9.*'",
-]
-sdist = { url = "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz", hash = "sha256:1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed", size = 435556, upload-time = "2026-01-07T16:24:43.925Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/39/08/aaaad47bc4e9dc8c725e68f9d04865dbcb2052843ff09c97b08904852d84/urllib3-2.6.3-py3-none-any.whl", hash = "sha256:bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4", size = 131584, upload-time = "2026-01-07T16:24:42.685Z" },
+    { url = "https://files.pythonhosted.org/packages/7f/3e/5db95bcf282c52709639744ca2a8b149baccf648e39c8cc87553df9eae0c/urllib3-2.7.0-py3-none-any.whl", hash = "sha256:9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897", size = 131087, upload-time = "2026-05-07T16:13:17.151Z" },
 ]
 
 [[package]]
