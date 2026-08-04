@@ -84,29 +84,13 @@ repos:
         priority: 7
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.11.29
+    rev: 0.12.1
     hooks:
       - id: uv-lock
         priority: 7
 
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.22
-    hooks:
-      - id: ruff-format
-        priority: 7
-      - id: ruff-check
-        args: [--fix]
-        priority: 8
-
   - repo: local
     hooks:
-      - id: mypy
-        name: mypy
-        entry: python3 -m mypy horizon_hwm_store
-        language: system
-        types: [python]
-        pass_filenames: false
-        priority: 9
       - id: towncrier
         name: towncrier
         entry: towncrier build --draft
@@ -114,6 +98,30 @@ repos:
         types: [rst]
         pass_filenames: false
         priority: 7
+
+      - id: ruff-format
+        name: ruff-format
+        language: system
+        entry: ruff format .
+        types: [python]
+        pass_filenames: false
+        priority: 7
+
+      - id: ruff-check
+        name: ruff-check
+        language: system
+        entry: ruff check --fix
+        types: [python]
+        pass_filenames: false
+        priority: 8
+
+      - id: mypy
+        name: mypy
+        entry: mypy horizon_hwm_store
+        language: system
+        types: [python]
+        pass_filenames: false
+        priority: 9
 
   - repo: meta
     hooks:
@@ -124,6 +132,8 @@ repos:
 
 ci:
   skip:
-    - mypy # checked with Github Actions
     - docker-compose-check # cannot run on pre-commit.ci
+    - mypy # checked with Github Actions
+    - ruff-format # checked with Github Actions
+    - ruff-check # checked with Github Actions
     - towncrier # checked with Github Actions
