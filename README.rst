@@ -42,7 +42,7 @@ Can be used by `onETL <https://onetl.readthedocs.io/en/stable/hwm_store/index.ht
 Requirements
 ------------
 
-**Python 3.7+**
+**Python 3.10+**
 
 Documentation
 -------------
