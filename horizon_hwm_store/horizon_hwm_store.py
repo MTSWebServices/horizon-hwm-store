@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 from __future__ import annotations
 
-from typing import Any, Optional, cast
+from typing import Any, cast
 
 from etl_entities.hwm import HWM, HWMTypeRegistry
 from etl_entities.hwm_store import BaseHWMStore, register_hwm_store_class
@@ -151,8 +151,8 @@ class HorizonHWMStore(BaseHWMStore):
     namespace: str
     retry: RetryConfig = Field(default_factory=RetryConfig)
     timeout: TimeoutConfig = Field(default_factory=TimeoutConfig)
-    _client: Optional[HorizonClientSync] = PrivateAttr(default=None)
-    _namespace_id: Optional[int] = PrivateAttr(default=None)
+    _client: HorizonClientSync | None = PrivateAttr(default=None)
+    _namespace_id: int | None = PrivateAttr(default=None)
 
     @property
     def client(self) -> HorizonClientSync:
@@ -165,7 +165,7 @@ class HorizonHWMStore(BaseHWMStore):
             )
         return self._client
 
-    def get_hwm(self, name: str) -> Optional[HWM]:
+    def get_hwm(self, name: str) -> HWM | None:
         namespace_id = self._get_namespace_id()
         hwm_id = self._get_hwm_id(namespace_id, name)
         if hwm_id is None:
@@ -279,14 +279,12 @@ class HorizonHWMStore(BaseHWMStore):
                 f"Namespace {self.namespace!r} not found. "
                 "Please create it before using by calling .force_create_namespace() method."
             )
-            raise RuntimeError(
-                msg,
-            )
+            raise RuntimeError(msg)
 
         self._namespace_id = namespace.id
         return self._namespace_id
 
-    def _get_hwm_id(self, namespace_id: int, hwm_name: str) -> Optional[int]:
+    def _get_hwm_id(self, namespace_id: int, hwm_name: str) -> int | None:
         """Fetch the ID of the HWM within the given namespace.
 
         Parameters
