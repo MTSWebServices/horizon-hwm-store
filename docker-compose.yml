@@ -19,14 +19,12 @@ services:
       retries: 3
 
   backend:
-    image: mtsrus/horizon-backend:latest
+    image: ${HORIZON_IMAGE:-mtsrus/horizon-backend:latest}
     restart: unless-stopped
     environment:
       HORIZON__DATABASE__URL: postgresql+asyncpg://horizon:123UsedForTestOnly@db:5432/horizon
       HORIZON__AUTH__ACCESS_TOKEN__SECRET_KEY: 234UsedForTestOnly
       HORIZON__AUTH__PROVIDER: horizon.backend.providers.auth.dummy.DummyAuthProvider
-      HORIZON__SERVER__LOGGING__PRESET: colored
-      HORIZON__SERVER__DEBUG: 'false'
     ports:
       - 8000:8000
     depends_on:

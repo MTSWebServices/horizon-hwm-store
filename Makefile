@@ -2,7 +2,8 @@
 
 VERSION = develop
 VIRTUAL_ENV ?= .venv
-PYDANTIC_VERSION ?= 2
+ETL_ENTITIES_VERSION ?= 3
+DATA_HORIZON_VERSION ?= 2
 PYTHON = ${VIRTUAL_ENV}/bin/python
 PIP = ${VIRTUAL_ENV}/bin/pip
 UV ?= ${VIRTUAL_ENV}/bin/uv
@@ -37,7 +38,8 @@ venv-install: ##@Env Install requirements to venv
 		--group dev \
 		--group docs \
 		--group test \
-		--group test-pydantic-${PYDANTIC_VERSION} \
+		--group test-pydantic-${ETL_ENTITIES_VERSION} \
+		--group test-data-horizon-${DATA_HORIZON_VERSION} \
 		$(ARGS)
 
 

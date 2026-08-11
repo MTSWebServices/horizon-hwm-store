@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 from __future__ import annotations
 
-from typing import Any, cast
+from typing import Annotated, Any, cast
 
 from etl_entities.hwm import HWM, HWMTypeRegistry
 from etl_entities.hwm_store import BaseHWMStore, register_hwm_store_class
@@ -17,16 +17,21 @@ from horizon.commons.schemas.v1 import (
     NamespacePaginateQueryV1,
     NamespaceResponseV1,
 )
+from pydantic import UrlConstraints
+from pydantic.v1 import BaseModel
 
-try:
+if issubclass(BaseHWMStore, BaseModel):
     from pydantic.v1 import AnyHttpUrl, Field, PrivateAttr, validator
-except ImportError:
+else:
     from pydantic import (  # type: ignore[no-redef, assignment]
         AnyHttpUrl,
         Field,
         PrivateAttr,
         validator,
     )
+
+
+Url = Annotated[AnyHttpUrl, UrlConstraints(preserve_empty_path=True)]
 
 
 @register_hwm_store_class("horizon")
@@ -146,11 +151,12 @@ class HorizonHWMStore(BaseHWMStore):
 
     """
 
-    api_url: AnyHttpUrl
+    api_url: Url
     auth: LoginPassword
     namespace: str
     retry: RetryConfig = Field(default_factory=RetryConfig)
     timeout: TimeoutConfig = Field(default_factory=TimeoutConfig)
+
     _client: HorizonClientSync | None = PrivateAttr(default=None)
     _namespace_id: int | None = PrivateAttr(default=None)
 
@@ -158,7 +164,7 @@ class HorizonHWMStore(BaseHWMStore):
     def client(self) -> HorizonClientSync:
         if not self._client:
             self._client = HorizonClientSync(
-                base_url=str(self.api_url),  # type: ignore[arg-type]
+                base_url=str(self.api_url),
                 auth=self.auth,
                 retry=self.retry,
                 timeout=self.timeout,

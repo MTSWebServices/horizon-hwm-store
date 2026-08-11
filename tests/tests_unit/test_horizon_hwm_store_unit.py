@@ -9,7 +9,7 @@ from horizon_hwm_store import HorizonHWMStore
 
 
 def test_validation_errors():
-    with pytest.raises(ValueError, match="none is not an allowed value"):
+    with pytest.raises(ValueError, match="Input should be a valid string"):
         HorizonHWMStore(
             api_url="http://some.domain.com",
             auth=LoginPassword(login="user", password=secrets.token_hex()),
@@ -57,7 +57,7 @@ def test_horizon_hwm_store_init(caplog):
         namespace=namespace,
     )
 
-    assert hwm_store.api_url == "http://some.domain.com"
+    assert str(hwm_store.api_url) == "http://some.domain.com"
     assert hwm_store.auth.login == user
     assert hwm_store.namespace == namespace
     assert hwm_store.auth.password != password
@@ -73,7 +73,7 @@ def test_horizon_hwm_store_init(caplog):
 
 
 def test_horizon_hwm_no_schema():
-    with pytest.raises(ValueError, match="invalid or missing URL scheme"):
+    with pytest.raises(ValueError, match="Input should be a valid URL, relative URL without a base"):
         HorizonHWMStore(
             api_url="some.domain.com",
             auth=LoginPassword(login=secrets.token_hex(), password=secrets.token_hex()),
