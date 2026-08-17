@@ -1,0 +1,8 @@
+1.2.0 (2026-08-17)
+==================
+
+Breaking Changes
+----------------
+
+- Drop support for Python 3.7-3.9. Minimal supported Python version is 3.10.
+- Drop Pydantic 1.x support, minimal Pydantic version is now 2.x. (:github:pull:`122`)
