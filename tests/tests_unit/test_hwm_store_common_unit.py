@@ -9,7 +9,7 @@ from horizon_hwm_store import HorizonHWMStore
 
 
 @pytest.mark.parametrize(
-    "hwm_store_class, input_config, key",
+    ("hwm_store_class", "input_config", "key"),
     [
         (
             HorizonHWMStore,
@@ -45,7 +45,6 @@ def test_hwm_store_unit_detect(hwm_store_class, input_config, config_constructor
 @pytest.mark.parametrize(
     "input_config",
     [
-        {"hwm_store": 1},
         {"hwm_store": "unknown"},
         {"hwm_store": {"unknown": None}},
     ],

@@ -1,16 +1,176 @@
-[tool.isort]
-profile = "black"
-multi_line_output = 3
+[build-system]
+requires = [ "setuptools>=61.2", "setuptools-git-versioning>=3.0,<4"]
+build-backend = "setuptools.build_meta"
 
-[tool.black]
+[tool.setuptools-git-versioning]
+enabled = true
+version_file = "horizon_hwm_store/VERSION"
+count_commits_from_version_file = true
+dev_template = "{tag}.dev{env:GITHUB_RUN_ID:{ccount}}+git.{sha}"
+dirty_template = "{tag}.dev{env:GITHUB_RUN_ID:{ccount}}+git.{sha}.dirty"
+
+[project]
+name = "horizon-hwm-store"
+authors = [{name = "MWS Data Bridge", email = "onetools@mts.ru"}]
+license = {text = "Apache-2.0"}
+description = "onETL Plugin for Horizon store"
+keywords = ["ETL", "Horizon", "HWM"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "data-horizon[client-sync]>=1.0,<3.0",
+    "etl-entities>=2.1,<4",
+    "pydantic>=2.0,<3",
+]
+dynamic = ["version"]
+
+[project.readme]
+file = "README.rst"
+content-type = "text/x-rst"
+
+[project.urls]
+Homepage = "https://github.com/MTSWebServices/horizon-hwm-store"
+Documentation = "https://horizon-hwm-store.readthedocs.io/"
+Source = "https://github.com/MTSWebServices/horizon-hwm-store"
+"CI/CD" = "https://github.com/MTSWebServices/horizon-hwm-store/actions"
+Tracker = "https://github.com/MTSWebServices/horizon-hwm-store/issues"
+
+[project.entry-points."etl_entities.plugins"]
+horizon-hwm-store = "horizon_hwm_store"
+
+[project.entry-points."tricoder_package_spy.register"]
+horizon-hwm-store = "horizon_hwm_store"
+
+[tool.setuptools.packages.find]
+include = ["horizon_hwm_store*"]
+exclude = ["docs", "tests"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed", "VERSION"]
+
+
+[dependency-groups]
+test = [
+    "coverage~=7.15.3",
+    "omegaconf~=2.3.1",
+    "pytest~=9.1.1",
+]
+test-etl-entities-2 = ["etl-entities<3"]
+test-etl-entities-3 = ["etl-entities>=3,<4"]
+test-data-horizon-1 = ["data-horizon[client-sync]>=1.0,<2.0"]
+test-data-horizon-2 = ["data-horizon[client-sync]>=2.0,<3.0"]
+dev = [
+    "mypy~=2.3.0",
+    "prek~=0.4.12",
+    "ruff~=0.16.1",
+    "types-psutil~=7.2.0",
+]
+docs = [
+    "furo~=2025.12.19",
+    "numpydoc~=1.10.0",
+    "packaging~=25.0",
+    # sphinx-toolbox doesn't support Sphinx 9 yet
+    "sphinx~=8.2.3",
+    "sphinx-copybutton~=0.5.2",
+    "sphinx-favicon~=1.1.0",
+    "sphinx-last-updated-by-git~=0.3.8",
+    "sphinx-toolbox>=4.1,<4.4",
+    "sphinxcontrib-towncrier~=0.5.0a0",
+    "towncrier~=25.8.0",
+]
+
+[tool.uv]
+default-groups = []
+conflicts = [
+    [
+        { group = "test-etl-entities-2" },
+        { group = "test-etl-entities-3" },
+    ],
+    [
+        { group = "test-data-horizon-1" },
+        { group = "test-data-horizon-2" },
+    ],
+]
+
+[tool.uv.dependency-groups]
+dev = {requires-python = ">=3.12"}
+docs = {requires-python = ">=3.12"}
+
+[pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [".git"]
+cache_dir = ".pytest_cache"
+log_cli_level = "INFO"
+
+[tool.coverage.paths]
+source = ["horizon_hwm_store"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+data_file = "reports/.coverage"
+omit = ["tests/*"]
+
+[tool.coverage.report]
+precision = 2
+
+exclude_also = [
+  "def __repr__",
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "class .*\bProtocol:",
+  "@(abc\\.)?abstractmethod",
+  "\\.\\.\\.",
+  "def downgrade\\(\\)",
+]
+partial_also = [
+  "if .*TYPE_CHECKING:",
+  "if .*isEnabledFor.*:",
+  "if .*debug.*:",
+  "if .*sys.version_info.*:",
+  "if __name__ == .__main__.:",
+  "except .*ImportError",
+]
+
+[tool.ruff]
+target-version = "py310"
 line-length = 120
-target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
-include = '\.pyi?$'
-exclude = '''(\.eggs|\.git|\.mypy_cache|\.tox|\.venv|_build|buck-out|build|dist)'''
+extend-exclude = ["docs/", "Makefile"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D",
+    "ANN",
+    "FIX002",
+    "TD",
+    "CPY001",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "S",
+    "ANN",
+    "D",
+    "ARG",
+    "DTZ",
+]
 
 [tool.mypy]
 plugins = 'pydantic.mypy'
-python_version = 3.8
+python_version = "3.10"
 follow_imports = "silent"
 ignore_missing_imports = true
 pretty = true
@@ -18,8 +178,8 @@ show_error_codes = true
 strict_optional = true
 
 [tool.towncrier]
-name = "ETL Entities"
-package = "etl_entities"
+name = "Horizon HWM Store"
+package = "horizon_hwm_store"
 filename = "docs/changelog/NEXT_RELEASE.rst"
 directory = "docs/changelog/next_release/"
 title_format = "{version} ({project_date})"

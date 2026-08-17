@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DEFAULT_PYTHON: '3.13'
+  DEFAULT_PYTHON: '3.14'
 
 jobs:
   linters:
@@ -28,36 +28,29 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Set up Python ${{ env.DEFAULT_PYTHON }}
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
 
-      - name: Cache pip
-        uses: actions/cache@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
         with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-python-${{ env.DEFAULT_PYTHON }}-codeql-${{ hashFiles('requirements*.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-python-${{ env.DEFAULT_PYTHON }}-codeql-${{ hashFiles('requirements*.txt') }}
-            ${{ runner.os }}-python-${{ env.DEFAULT_PYTHON }}-codeql-
-            ${{ runner.os }}-python-
+          enable-cache: 'false'
 
-      - name: Upgrade pip
-        run: python -m pip install --upgrade pip setuptools wheel
+      # no uv cache here because fresh install takes about 1 second
 
       - name: Install dependencies
         run: |
-          pip install -I -r requirements.txt -r requirements-dev.txt
-          pip install -U flake8-commas
+          uv sync --group dev
 
-      - name: Run flake8
-        run: python3 -m flake8 --config setup.cfg .
-
-      - name: Run mypy
-        run: python3 -m mypy --config-file setup.cfg horizon_hwm_store
+      - name: Run linters
+        run: |
+          uv run ruff format --check
+          uv run ruff check
+          uv run -m mypy horizon_hwm_store
 
   codeql:
     name: CodeQL
@@ -69,20 +62,20 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Set up Python ${{ env.DEFAULT_PYTHON }}
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
 
     # Initializes the CodeQL tools for scanning.
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v4
+        uses: github/codeql-action/init@v4.37.6
         with:
           languages: python
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v4
+        uses: github/codeql-action/analyze@v4.37.6
         with:
           category: /language:python

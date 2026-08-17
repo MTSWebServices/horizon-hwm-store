@@ -12,7 +12,6 @@
 #
 
 import os
-import subprocess
 import sys
 from pathlib import Path
 
@@ -20,14 +19,14 @@ from packaging import version as Version
 
 PROJECT_ROOT_DIR = Path(__file__).parent.parent.resolve()
 
-sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
+sys.path.insert(0, os.fspath(PROJECT_ROOT_DIR))
 
 
 # -- Project information -----------------------------------------------------
 
 project = "Horizon HWM Store"
-copyright = "2023-2025 MTS PJSC"
-author = "DataOps.ETL"
+copyright = "2023-present MTS PJSC"
+author = "MWS Data Bridge"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -35,7 +34,9 @@ author = "DataOps.ETL"
 #
 # The short X.Y version.
 
-ver = Version.parse(subprocess.check_output("python ../setup.py --version", shell=True, text=True).strip())
+VERSION_FILE = PROJECT_ROOT_DIR / "horizon_hwm_store" / "VERSION"
+ver = Version.parse(VERSION_FILE.read_text())
+
 version = ver.base_version
 # The full version, including alpha/beta/rc tags.
 release = ver.public
@@ -50,20 +51,12 @@ extensions = [
     "sphinx_copybutton",
     "sphinx.ext.autosummary",
     "sphinx.ext.autodoc",
-    "sphinxcontrib.autodoc_pydantic",
     "sphinx_favicon",
     "sphinx_toolbox.github",
     "sphinxcontrib.towncrier",  # provides `towncrier-draft-entries` directive
     "sphinx_last_updated_by_git",
 ]
 numpydoc_show_class_members = True
-autodoc_pydantic_model_show_config = False
-autodoc_pydantic_model_show_config_summary = False
-autodoc_pydantic_model_show_config_member = False
-autodoc_pydantic_model_show_json = False
-autodoc_pydantic_model_show_validator_summary = False
-autodoc_pydantic_model_show_validator_members = False
-autodoc_pydantic_field_list_validators = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
