@@ -32,7 +32,7 @@ jobs:
         python-version: ['3.14']
         etl-entities-version: ['2', '3']
         horizon-client-version: ['1', '2']
-        horizon-image-version: ['2.0.0']
+        horizon-image-version: ['2.0.1']
 
         include:
           # minimal supported versions

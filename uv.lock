@@ -734,7 +734,7 @@ client-sync = [
 
 [[package]]
 name = "data-horizon"
-version = "2.0.0"
+version = "2.0.1"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "python_full_version >= '3.15'",
@@ -747,9 +747,9 @@ dependencies = [
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/05/6b/03d564716a141f93d1acbe17ff76be2f6de1d3212ed6e275775c6e8fb8d5/data_horizon-2.0.0.tar.gz", hash = "sha256:23fbf820d6a0db6436a9c268b904dc375736d23f26b41ad33d39698c4bfcb744", size = 62540, upload-time = "2026-08-12T10:45:25.583Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/29/95f67e188f6e650bc87a2cb7c850f9e9a655ccdc5ca8522e8b61fcb2a78a/data_horizon-2.0.1.tar.gz", hash = "sha256:b254d305b53d47a916df8c930fa4218b466062bfca7580954e4e34d9139ae051", size = 62574, upload-time = "2026-08-19T12:51:37.332Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3d/a6/572ed97fd9d012565cfbfcabe20a1adcc274721b86a74b7ed9e95a252a5f/data_horizon-2.0.0-py3-none-any.whl", hash = "sha256:1303edb5125e6ce3dffb5a7d2cadf3e67aea78ed3b0d8390b70dcdc798955474", size = 117263, upload-time = "2026-08-12T10:45:24.044Z" },
+    { url = "https://files.pythonhosted.org/packages/54/29/fff400681bf1837514324aee18c14be43de6794265382348bd31ba4a4671/data_horizon-2.0.1-py3-none-any.whl", hash = "sha256:5f637502deaf31189316e821e1b1f952ad58145d5f9a54f9171ead75bbd249ba", size = 117286, upload-time = "2026-08-19T12:51:35.746Z" },
 ]
 
 [package.optional-dependencies]
@@ -818,7 +818,7 @@ wheels = [
 
 [[package]]
 name = "etl-entities"
-version = "3.0.2"
+version = "3.0.4"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "python_full_version >= '3.15'",
@@ -827,15 +827,14 @@ resolution-markers = [
     "python_full_version < '3.12'",
 ]
 dependencies = [
-    { name = "bidict" },
-    { name = "frozendict" },
+    { name = "frozendict", marker = "(python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
     { name = "importlib-metadata" },
     { name = "pydantic" },
-    { name = "typing-extensions" },
+    { name = "typing-extensions", marker = "(python_full_version < '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (python_full_version < '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f9/81/f946f8f3be38e9eaf0e5920ac5d0f6e83ba58a795875667301be20997deb/etl_entities-3.0.2.tar.gz", hash = "sha256:73cc5fc286ced557deb007484a5b0f87ef731b17045a9ca74ccc0a52b79e6a7f", size = 23021, upload-time = "2026-08-07T13:04:25.201Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/80/ea/3f2e447919a98239c9ae2f84b1b569288eb6b5e2e035617ee1e49135885b/etl_entities-3.0.4.tar.gz", hash = "sha256:de4f8bd3f2c3e3bed1ba54304e387669a98e16f96800d08a37c468c9bf1376fa", size = 23194, upload-time = "2026-08-18T08:15:39.939Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/01/d8/e073088c99315e42d53eaa4e0607097176558ddc5aafce8b2153179d4dfe/etl_entities-3.0.2-py3-none-any.whl", hash = "sha256:717994c3c8bb0757d1d8b5e4443ef6761bcde406f98c6c6b3e4e70d5860144e7", size = 34596, upload-time = "2026-08-07T13:04:24.081Z" },
+    { url = "https://files.pythonhosted.org/packages/e9/42/53d46d556d63386d05f294c7e2f713617b9fcad9d81f21c1fa04332e23e6/etl_entities-3.0.4-py3-none-any.whl", hash = "sha256:fd53b589280b3d87b820a7e02b3ad2f1e89d4387d99d3582ee26a7cfb8a95ab3", size = 34554, upload-time = "2026-08-18T08:15:38.731Z" },
 ]
 
 [[package]]
@@ -909,9 +908,9 @@ name = "horizon-hwm-store"
 source = { editable = "." }
 dependencies = [
     { name = "data-horizon", version = "1.1.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "data-horizon", version = "2.0.0", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "data-horizon", version = "2.0.1", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
     { name = "etl-entities", version = "2.6.1", source = { registry = "https://pypi.org/simple" }, marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2')" },
-    { name = "etl-entities", version = "3.0.2", source = { registry = "https://pypi.org/simple" }, marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "etl-entities", version = "3.0.4", source = { registry = "https://pypi.org/simple" }, marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
     { name = "pydantic" },
 ]
 
@@ -943,13 +942,13 @@ test-data-horizon-1 = [
     { name = "data-horizon", version = "1.1.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 test-data-horizon-2 = [
-    { name = "data-horizon", version = "2.0.0", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "data-horizon", version = "2.0.1", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 test-etl-entities-2 = [
     { name = "etl-entities", version = "2.6.1", source = { registry = "https://pypi.org/simple" } },
 ]
 test-etl-entities-3 = [
-    { name = "etl-entities", version = "3.0.2", source = { registry = "https://pypi.org/simple" } },
+    { name = "etl-entities", version = "3.0.4", source = { registry = "https://pypi.org/simple" } },
 ]
 
 [package.metadata]
@@ -1003,11 +1002,11 @@ wheels = [
 
 [[package]]
 name = "idna"
-version = "3.18"
+version = "3.19"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/cd/63/9496c57188a2ee585e0f1db071d75089a11e98aa86eb99d9d7618fc1edce/idna-3.18.tar.gz", hash = "sha256:ffb385a7e039654cef1ab9ef32c6fafe283c0c0467bba1d9029738ce4a14a848", size = 196711, upload-time = "2026-06-02T14:34:07.794Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/5f/f7/abb373e5757eaec4b922b92f97ec8d6d7e057cf06778247604fbc4e7c3f3/idna-3.19.tar.gz", hash = "sha256:5e0811a4383b21dc5838069f801c4fb62113b7447663d2530d2bd6e77b49bf15", size = 215237, upload-time = "2026-08-18T05:14:24.27Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1e/5e/d4e9f1a599fb8e573b7b87160658329fbf28d19eac2718f51fc3def3aa5a/idna-3.18-py3-none-any.whl", hash = "sha256:7f952cbe720b688055e3f87de14f5c3e5fdaa8bc3928985c4077ca689de849a2", size = 65455, upload-time = "2026-06-02T14:34:06.319Z" },
+    { url = "https://files.pythonhosted.org/packages/57/b0/0e52c878c53f245edd3a11020f20979b3f490f245af532c7cae3027754b5/idna-3.19-py3-none-any.whl", hash = "sha256:815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4", size = 68550, upload-time = "2026-08-18T05:14:22.343Z" },
 ]
 
 [[package]]
