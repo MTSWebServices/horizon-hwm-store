@@ -69,7 +69,7 @@ test = [
 ]
 test-etl-entities-2 = ["etl-entities<3"]
 test-etl-entities-3 = ["etl-entities<4,>=3"]
-test-data-horizon-1 = ["data-horizon[client-sync]<2.0,>=1.0"]
+test-data-horizon-1 = ["data-horizon[client-sync]>=1.0,<3.0"]
 test-data-horizon-2 = ["data-horizon[client-sync]<3.0,>=2.0"]
 dev = [
     "mypy~=2.3.1",
