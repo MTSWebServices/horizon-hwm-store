@@ -38,7 +38,7 @@ venv-install: ##@Env Install requirements to venv
 		--group dev \
 		--group docs \
 		--group test \
-		--group test-pydantic-${ETL_ENTITIES_VERSION} \
+		--group test-etl-entities-${ETL_ENTITIES_VERSION} \
 		--group test-data-horizon-${DATA_HORIZON_VERSION} \
 		$(ARGS)
 

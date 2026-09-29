@@ -24,6 +24,10 @@ updates:
       # https://github.com/sphinx-toolbox/sphinx-toolbox/issues/201
       - dependency-name: sphinx
         update-types: ["version-update:semver-major"]
+      - dependency-name: data-horizon
+        update-types: ["version-update:semver-major"]
+      - dependency-name: etl-entities
+        update-types: ["version-update:semver-major"]
     # https://til.simonwillison.net/github/dependabot-python-setup
     groups:
       python-packages:
