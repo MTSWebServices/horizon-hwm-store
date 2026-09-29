@@ -760,76 +760,12 @@ wheels = [
 
 [[package]]
 name = "data-horizon"
-version = "1.1.3"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.15' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.15' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.15' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.13' and python_full_version < '3.15' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.13' and python_full_version < '3.15' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.13' and python_full_version < '3.15' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.12.*' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.12.*' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.12.*' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.11.*' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version < '3.12' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version < '3.11' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version < '3.12' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-]
-dependencies = [
-    { name = "pydantic", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "typing-extensions", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/10/03/23ecdf5539179216c08b29aa5d0f8102f20a92e6e7c91ef48c65233959e0/data_horizon-1.1.3.tar.gz", hash = "sha256:4dbeb79d900200ec88a032d1a0fd83336fc3942d23cc092d1267bd00208e0748", size = 59782, upload-time = "2025-10-29T15:42:40.354Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/77/e1/621c1ca17f8b2ed8df0b664e8592e2b458d0cbeb327c5b2c1ce05cbdd306/data_horizon-1.1.3-py3-none-any.whl", hash = "sha256:bf862fd6890846bb11594aa716aa271bf5c5ec14b12102bf3cb5fa9cb3c4f580", size = 120148, upload-time = "2025-10-29T15:42:39.051Z" },
-]
-
-[package.optional-dependencies]
-client-sync = [
-    { name = "authlib", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "cffi", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "requests", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "urllib3", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-]
-
-[[package]]
-name = "data-horizon"
 version = "2.0.2"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.13' and python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.13' and python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.13' and python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.13' and python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.13' and python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version >= '3.13' and python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.12.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.12.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.12.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.12.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.12.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.12.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.11.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version == '3.11.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version < '3.12' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version < '3.12' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version < '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version < '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version < '3.12' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-    "python_full_version < '3.12' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
-]
 dependencies = [
-    { name = "authlib", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "pydantic", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "typing-extensions", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "authlib" },
+    { name = "pydantic" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e9/7c/15107e9f7ac448f4dbc745e24d52e4b878c3c5de31a5b7bb78cc0237cf95/data_horizon-2.0.2.tar.gz", hash = "sha256:98465a1b113ae05f72e10451550c7dc99720a06d9eb0221956b8b84800f7408a", size = 61500, upload-time = "2026-09-17T08:30:48.475Z" }
 wheels = [
@@ -838,8 +774,8 @@ wheels = [
 
 [package.optional-dependencies]
 client-sync = [
-    { name = "requests", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "urllib3", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "requests" },
+    { name = "urllib3" },
 ]
 
 [[package]]
@@ -993,8 +929,7 @@ wheels = [
 name = "horizon-hwm-store"
 source = { editable = "." }
 dependencies = [
-    { name = "data-horizon", version = "1.1.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "data-horizon", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "data-horizon", extra = ["client-sync"] },
     { name = "etl-entities", version = "2.6.1", source = { registry = "https://pypi.org/simple" }, marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2')" },
     { name = "etl-entities", version = "3.0.4", source = { registry = "https://pypi.org/simple" }, marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
     { name = "pydantic" },
@@ -1025,10 +960,10 @@ test = [
     { name = "pytest" },
 ]
 test-data-horizon-1 = [
-    { name = "data-horizon", version = "1.1.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "data-horizon", extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 test-data-horizon-2 = [
-    { name = "data-horizon", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "data-horizon", extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 test-etl-entities-2 = [
     { name = "etl-entities", version = "2.6.1", source = { registry = "https://pypi.org/simple" } },
@@ -1068,7 +1003,7 @@ test = [
     { name = "omegaconf", specifier = "~=2.3.1" },
     { name = "pytest", specifier = "~=9.1.1" },
 ]
-test-data-horizon-1 = [{ name = "data-horizon", extras = ["client-sync"], specifier = ">=1.0,<2.0" }]
+test-data-horizon-1 = [{ name = "data-horizon", extras = ["client-sync"], specifier = ">=1.0,<3.0" }]
 test-data-horizon-2 = [{ name = "data-horizon", extras = ["client-sync"], specifier = ">=2.0,<3.0" }]
 test-etl-entities-2 = [{ name = "etl-entities", specifier = "<3" }]
 test-etl-entities-3 = [{ name = "etl-entities", specifier = ">=3,<4" }]
