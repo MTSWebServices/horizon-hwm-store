@@ -30,8 +30,8 @@ classifiers = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "data-horizon[client-sync]>=1.0,<3.0",
-    "etl-entities>=2.1,<4",
+    "data-horizon[client-sync]<3.0,>=1.0",
+    "etl-entities<4,>=2.1",
     "pydantic>=2.0,<3",
 ]
 dynamic = ["version"]
@@ -63,14 +63,14 @@ exclude = ["docs", "tests"]
 
 [dependency-groups]
 test = [
-    "coverage~=7.15.3",
+    "coverage>=7.15.3,<7.17.0",
     "omegaconf~=2.3.1",
     "pytest~=9.1.1",
 ]
-test-etl-entities-2 = ["etl-entities<3"]
-test-etl-entities-3 = ["etl-entities>=3,<4"]
-test-data-horizon-1 = ["data-horizon[client-sync]>=1.0,<2.0"]
-test-data-horizon-2 = ["data-horizon[client-sync]>=2.0,<3.0"]
+test-etl-entities-2 = ["etl-entities<4"]
+test-etl-entities-3 = ["etl-entities<4,>=3"]
+test-data-horizon-1 = ["data-horizon[client-sync]>=1.0,<3.0"]
+test-data-horizon-2 = ["data-horizon[client-sync]<3.0,>=2.0"]
 dev = [
     "mypy~=2.3.1",
     "prek~=0.5.4",
@@ -79,8 +79,8 @@ dev = [
 ]
 docs = [
     "furo~=2025.12.19",
-    "numpydoc~=1.10.0",
-    "packaging~=25.0",
+    "numpydoc>=1.10,<1.12",
+    "packaging>=25,<27",
     # sphinx-toolbox doesn't support Sphinx 9 yet
     "sphinx~=8.2.3",
     "sphinx-copybutton~=0.5.2",
@@ -88,7 +88,7 @@ docs = [
     "sphinx-last-updated-by-git~=0.3.8",
     "sphinx-toolbox~=4.3.0",
     "sphinxcontrib-towncrier~=0.5.0a0",
-    "towncrier~=25.8.0",
+    "towncrier>=25.8,<26.10",
 ]
 
 [tool.uv]
