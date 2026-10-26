@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.10"
 resolution-markers = [
     "python_full_version >= '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3'",
@@ -55,7 +55,7 @@ name = "accessible-pygments"
 version = "0.0.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pygments", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "pygments" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/bc/c1/bbac6a50d02774f91572938964c582fff4270eee73ab822a4aeea4d8b11b/accessible_pygments-0.0.5.tar.gz", hash = "sha256:40918d3e6a2b619ad424cb91e556bd3bd8865443d9f22f1dcdf79e33c8046872", size = 1377899, upload-time = "2024-05-10T11:23:10.216Z" }
 wheels = [
@@ -91,10 +91,10 @@ name = "apeye"
 version = "1.4.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "apeye-core", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "domdf-python-tools", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "platformdirs", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "requests", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "apeye-core" },
+    { name = "domdf-python-tools" },
+    { name = "platformdirs" },
+    { name = "requests" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/4f/6b/cc65e31843d7bfda8313a9dc0c77a21e8580b782adca53c7cb3e511fe023/apeye-1.4.1.tar.gz", hash = "sha256:14ea542fad689e3bfdbda2189a354a4908e90aee4bf84c15ab75d68453d76a36", size = 99219, upload-time = "2023-08-14T15:32:41.381Z" }
 wheels = [
@@ -106,8 +106,8 @@ name = "apeye-core"
 version = "1.1.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "domdf-python-tools", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "idna", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "domdf-python-tools" },
+    { name = "idna" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e5/4c/4f108cfd06923bd897bf992a6ecb6fb122646ee7af94d7f9a64abd071d4c/apeye_core-1.1.5.tar.gz", hash = "sha256:5de72ed3d00cc9b20fea55e54b7ab8f5ef8500eb33a5368bc162a5585e238a55", size = 96511, upload-time = "2024-01-30T17:45:48.727Z" }
 wheels = [
@@ -196,7 +196,7 @@ name = "autodocsumm"
 version = "0.2.15"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "sphinx" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/46/b7/f28dea12fae1d1ad1e706f5cf6d16e8d735f305ebee86fd9390e099bd27d/autodocsumm-0.2.15.tar.gz", hash = "sha256:eaf431e7a5a39e41a215311173c8b95e83859059df1ccf3b79c64bf3d5582b3c", size = 46674, upload-time = "2026-03-26T20:44:07.074Z" }
 wheels = [
@@ -217,8 +217,8 @@ name = "beautifulsoup4"
 version = "4.15.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "soupsieve", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "typing-extensions", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "soupsieve" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/43/65/318323f98dbee45d42dff61d8f047181bc6f2268a9068cfad035a46be5af/beautifulsoup4-4.15.0.tar.gz", hash = "sha256:288e3ca7d54b06f2ac191970bc275c1939cb46d450b255bf6718b04aa37ab4f7", size = 632571, upload-time = "2026-06-07T16:44:20.453Z" }
 wheels = [
@@ -248,7 +248,7 @@ resolution-markers = [
     "python_full_version == '3.11.*'",
 ]
 dependencies = [
-    { name = "typing-extensions", marker = "(python_full_version == '3.11.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (python_full_version == '3.11.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
+    { name = "typing-extensions", marker = "(python_full_version == '3.11.*' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a8/f2/8d2dd8276ca05e1f5157b6a0d34efb2f585f47a0fbed61e8aad04b221f0b/bidict-0.24.1.tar.gz", hash = "sha256:4dca6c17f0b01700e9f24359daa5ebabf7be022d99f4cb2a257b6af2a5076c88", size = 30818, upload-time = "2026-08-25T23:45:52.214Z" }
 wheels = [
@@ -260,8 +260,8 @@ name = "cachecontrol"
 version = "0.14.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "msgpack", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "requests", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "msgpack" },
+    { name = "requests" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/2d/f6/c972b32d80760fb79d6b9eeb0b3010a46b89c0b23cf6329417ff7886cd22/cachecontrol-0.14.4.tar.gz", hash = "sha256:e6220afafa4c22a47dd0badb319f84475d79108100d04e26e8542ef7d3ab05a1", size = 16150, upload-time = "2025-11-14T04:32:13.138Z" }
 wheels = [
@@ -270,16 +270,16 @@ wheels = [
 
 [package.optional-dependencies]
 filecache = [
-    { name = "filelock", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "filelock" },
 ]
 
 [[package]]
 name = "certifi"
-version = "2026.7.22"
+version = "2026.10.19"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz", hash = "sha256:741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55", size = 138112, upload-time = "2026-07-22T03:35:12.644Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a6/bd/1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2/certifi-2026.10.19.tar.gz", hash = "sha256:035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae", size = 137598, upload-time = "2026-10-20T02:24:16.604Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl", hash = "sha256:62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775", size = 136983, upload-time = "2026-07-22T03:35:11.276Z" },
+    { url = "https://files.pythonhosted.org/packages/c4/51/29046e48f693c54e5b7412216d447a1d8362c9653148d98c02cdf65fa733/certifi-2026.10.19-py3-none-any.whl", hash = "sha256:42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b", size = 136464, upload-time = "2026-10-20T02:24:15.072Z" },
 ]
 
 [[package]]
@@ -287,7 +287,7 @@ name = "cffi"
 version = "2.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pycparser", marker = "implementation_name != 'PyPy' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "pycparser", marker = "implementation_name != 'PyPy'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz", hash = "sha256:dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be", size = 530807, upload-time = "2026-08-03T21:21:18.939Z" }
 wheels = [
@@ -706,8 +706,8 @@ name = "cryptography"
 version = "50.0.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cffi", marker = "platform_python_implementation != 'PyPy' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "typing-extensions", marker = "python_full_version < '3.11' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "cffi", marker = "platform_python_implementation != 'PyPy'" },
+    { name = "typing-extensions", marker = "python_full_version < '3.11'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/bb/ad/5d6702db60b1e40b41ef513b6967ff5848f307d50f8449baf1634f5908f1/cryptography-50.0.1.tar.gz", hash = "sha256:5dd9bda1c12b4162f6ff568eeb5e0ff956c28d14406e875cfe8a63a2d414ff20", size = 880381, upload-time = "2026-08-25T19:45:45.499Z" }
 wheels = [
@@ -827,9 +827,9 @@ resolution-markers = [
     "python_full_version < '3.12' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-3'",
 ]
 dependencies = [
-    { name = "authlib", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "pydantic", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "typing-extensions", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "authlib", marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "pydantic", marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "typing-extensions", marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e9/7c/15107e9f7ac448f4dbc745e24d52e4b878c3c5de31a5b7bb78cc0237cf95/data_horizon-2.0.2.tar.gz", hash = "sha256:98465a1b113ae05f72e10451550c7dc99720a06d9eb0221956b8b84800f7408a", size = 61500, upload-time = "2026-09-17T08:30:48.475Z" }
 wheels = [
@@ -838,8 +838,8 @@ wheels = [
 
 [package.optional-dependencies]
 client-sync = [
-    { name = "requests", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "urllib3", marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "requests", marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "urllib3", marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 
 [[package]]
@@ -847,8 +847,8 @@ name = "dict2css"
 version = "0.6.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "domdf-python-tools", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "tinycss2", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "domdf-python-tools" },
+    { name = "tinycss2" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/83/ae/242596e550f79aa85ab6b5310caadd0b592063dc0c20c397d25707981f65/dict2css-0.6.0.tar.gz", hash = "sha256:143e55cb71c98a88c79f2c41e08a5fa4d875659275756f794e31ccd69936ce88", size = 9268, upload-time = "2026-05-21T08:34:29.598Z" }
 wheels = [
@@ -869,8 +869,8 @@ name = "domdf-python-tools"
 version = "3.10.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "natsort", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "typing-extensions", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "natsort" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/36/8b/ab2d8a292bba8fe3135cacc8bfd3576710a14b8f2d0a8cde19130d5c9d21/domdf_python_tools-3.10.0.tar.gz", hash = "sha256:2ae308d2f4f1e9145f5f4ba57f840fbfd1c2983ee26e4824347789649d3ae298", size = 100458, upload-time = "2025-02-12T17:34:05.747Z" }
 wheels = [
@@ -889,13 +889,13 @@ resolution-markers = [
     "python_full_version < '3.11'",
 ]
 dependencies = [
-    { name = "bidict", version = "0.23.1", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version < '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (python_full_version < '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "bidict", version = "0.24.1", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (python_full_version >= '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
-    { name = "frozendict", marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2')" },
-    { name = "importlib-metadata", marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2')" },
-    { name = "psutil", marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2')" },
-    { name = "pydantic", marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2')" },
-    { name = "typing-extensions", marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2')" },
+    { name = "bidict", version = "0.23.1", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version < '3.11' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "bidict", version = "0.24.1", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.11' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "frozendict", marker = "extra == 'group-17-horizon-hwm-store-test-etl-entities-2' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
+    { name = "importlib-metadata", marker = "extra == 'group-17-horizon-hwm-store-test-etl-entities-2' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
+    { name = "psutil", marker = "extra == 'group-17-horizon-hwm-store-test-etl-entities-2' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
+    { name = "pydantic", marker = "extra == 'group-17-horizon-hwm-store-test-etl-entities-2' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
+    { name = "typing-extensions", marker = "extra == 'group-17-horizon-hwm-store-test-etl-entities-2' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/0c/3f/bfdc50c602744a5865243d07f3b414601990443fe7be6aaecf4e4e53bdf8/etl_entities-2.6.1.tar.gz", hash = "sha256:57b5afce6d8007f53a315486d97cbf8b5ad44a660645ac3ab42e279cc0ec049e", size = 36220, upload-time = "2026-08-05T09:24:40.767Z" }
 wheels = [
@@ -913,10 +913,10 @@ resolution-markers = [
     "python_full_version < '3.12'",
 ]
 dependencies = [
-    { name = "frozendict", marker = "(python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "importlib-metadata", marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "pydantic", marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "typing-extensions", marker = "(python_full_version < '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (python_full_version < '3.11' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "frozendict", marker = "(python_full_version < '3.15' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "importlib-metadata", marker = "extra != 'group-17-horizon-hwm-store-test-etl-entities-2' or extra == 'group-17-horizon-hwm-store-test-etl-entities-3' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
+    { name = "pydantic", marker = "extra != 'group-17-horizon-hwm-store-test-etl-entities-2' or extra == 'group-17-horizon-hwm-store-test-etl-entities-3' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
+    { name = "typing-extensions", marker = "(python_full_version < '3.11' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/80/ea/3f2e447919a98239c9ae2f84b1b569288eb6b5e2e035617ee1e49135885b/etl_entities-3.0.4.tar.gz", hash = "sha256:de4f8bd3f2c3e3bed1ba54304e387669a98e16f96800d08a37c468c9bf1376fa", size = 23194, upload-time = "2026-08-18T08:15:39.939Z" }
 wheels = [
@@ -928,7 +928,7 @@ name = "exceptiongroup"
 version = "1.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "typing-extensions", marker = "python_full_version < '3.11' or (python_full_version == '3.11.*' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (python_full_version == '3.11.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (python_full_version == '3.11.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (python_full_version == '3.11.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (python_full_version >= '3.12' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (python_full_version == '3.11.*' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (python_full_version >= '3.12' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (python_full_version >= '3.12' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/50/79/66800aadf48771f6b62f7eb014e352e5d06856655206165d775e675a02c9/exceptiongroup-1.3.1.tar.gz", hash = "sha256:8b412432c6055b0b7d14c310000ae93352ed6754f70fa8f7c34141f91c4e3219", size = 30371, upload-time = "2025-11-21T23:01:54.787Z" }
 wheels = [
@@ -978,11 +978,11 @@ name = "furo"
 version = "2025.12.19"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "accessible-pygments", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "beautifulsoup4", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "pygments", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx-basic-ng", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "accessible-pygments" },
+    { name = "beautifulsoup4" },
+    { name = "pygments" },
+    { name = "sphinx" },
+    { name = "sphinx-basic-ng" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ec/20/5f5ad4da6a5a27c80f2ed2ee9aee3f9e36c66e56e21c00fde467b2f8f88f/furo-2025.12.19.tar.gz", hash = "sha256:188d1f942037d8b37cd3985b955839fea62baa1730087dc29d157677c857e2a7", size = 1661473, upload-time = "2025-12-19T17:34:40.889Z" }
 wheels = [
@@ -992,32 +992,33 @@ wheels = [
 [[package]]
 name = "horizon-hwm-store"
 source = { editable = "." }
+default-groups = []
 dependencies = [
     { name = "data-horizon", version = "1.1.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "data-horizon", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "etl-entities", version = "2.6.1", source = { registry = "https://pypi.org/simple" }, marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2')" },
-    { name = "etl-entities", version = "3.0.4", source = { registry = "https://pypi.org/simple" }, marker = "(extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra != 'group-17-horizon-hwm-store-test-etl-entities-2') or (extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "data-horizon", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "etl-entities", version = "2.6.1", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'group-17-horizon-hwm-store-test-etl-entities-2' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
+    { name = "etl-entities", version = "3.0.4", source = { registry = "https://pypi.org/simple" }, marker = "extra != 'group-17-horizon-hwm-store-test-etl-entities-2' or extra == 'group-17-horizon-hwm-store-test-etl-entities-3' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
     { name = "pydantic" },
 ]
 
 [package.dev-dependencies]
 dev = [
-    { name = "mypy", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "prek", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "ruff", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "types-psutil", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "mypy", marker = "python_full_version >= '3.12'" },
+    { name = "prek", marker = "python_full_version >= '3.12'" },
+    { name = "ruff", marker = "python_full_version >= '3.12'" },
+    { name = "types-psutil", marker = "python_full_version >= '3.12'" },
 ]
 docs = [
-    { name = "furo", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "numpydoc", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "packaging", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx-copybutton", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx-favicon", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx-last-updated-by-git", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx-toolbox", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinxcontrib-towncrier", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "towncrier", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "furo", marker = "python_full_version >= '3.12'" },
+    { name = "numpydoc", marker = "python_full_version >= '3.12'" },
+    { name = "packaging", marker = "python_full_version >= '3.12'" },
+    { name = "sphinx", marker = "python_full_version >= '3.12'" },
+    { name = "sphinx-copybutton", marker = "python_full_version >= '3.12'" },
+    { name = "sphinx-favicon", marker = "python_full_version >= '3.12'" },
+    { name = "sphinx-last-updated-by-git", marker = "python_full_version >= '3.12'" },
+    { name = "sphinx-toolbox", marker = "python_full_version >= '3.12'" },
+    { name = "sphinxcontrib-towncrier", marker = "python_full_version >= '3.12'" },
+    { name = "towncrier", marker = "python_full_version >= '3.12'" },
 ]
 test = [
     { name = "coverage" },
@@ -1036,6 +1037,10 @@ test-etl-entities-2 = [
 test-etl-entities-3 = [
     { name = "etl-entities", version = "3.0.4", source = { registry = "https://pypi.org/simple" } },
 ]
+
+[package.group-requires-python]
+dev = ">=3.12"
+docs = ">=3.12"
 
 [package.metadata]
 requires-dist = [
@@ -1078,8 +1083,8 @@ name = "html5lib"
 version = "1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "six", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "webencodings", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "six" },
+    { name = "webencodings" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ac/b6/b55c3f49042f1df3dcd422b7f224f939892ee94f22abcf503a9b7339eaf2/html5lib-1.1.tar.gz", hash = "sha256:b2e5b40261e20f354d198eae92afc10d750afb487ed5e50f9c4eaf07c184146f", size = 272215, upload-time = "2020-06-22T23:32:38.834Z" }
 wheels = [
@@ -1130,7 +1135,7 @@ name = "jinja2"
 version = "3.1.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "markupsafe", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "markupsafe" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/df/bf/f7da0350254c0ed7c72f3e33cef02e048281fec7ecec5f032d4aac52226b/jinja2-3.1.6.tar.gz", hash = "sha256:0137fb05990d35f1275a587e9aee6d56da821fc83491a0fb838183be43f66d6d", size = 245115, upload-time = "2025-03-05T20:05:02.478Z" }
 wheels = [
@@ -1467,11 +1472,11 @@ name = "mypy"
 version = "2.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ast-serialize", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "librt", marker = "(python_full_version >= '3.12' and platform_python_implementation != 'PyPy') or (python_full_version < '3.12' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (python_full_version < '3.12' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (platform_python_implementation == 'PyPy' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (platform_python_implementation == 'PyPy' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (platform_python_implementation == 'PyPy' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "mypy-extensions", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "pathspec", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "typing-extensions", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "ast-serialize" },
+    { name = "librt", marker = "platform_python_implementation != 'PyPy'" },
+    { name = "mypy-extensions" },
+    { name = "pathspec" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/82/6a/878cc1097d4035f82bd516658d0c528d2a9955bc7b363afcbd0b07fea11b/mypy-2.3.1.tar.gz", hash = "sha256:47c1b1207258513a9d93495f69c8be9de73916186f0e52703e8c461b7a623419", size = 3992554, upload-time = "2026-08-15T03:03:38.549Z" }
 wheels = [
@@ -1551,7 +1556,7 @@ name = "numpydoc"
 version = "1.11.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "sphinx" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c4/2f/5e9bf8ed0a93587b8089242b4926dfd04d4b3b0b65f04345d219a1225f03/numpydoc-1.11.0.tar.gz", hash = "sha256:26db0adaac8087e98da05c86b11198defd962aef7c21f4dffd2703c8c6eb4187", size = 101575, upload-time = "2026-09-15T16:31:08.905Z" }
 wheels = [
@@ -1805,13 +1810,13 @@ name = "pytest"
 version = "9.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "exceptiongroup", marker = "python_full_version < '3.11' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "exceptiongroup", marker = "python_full_version < '3.11'" },
     { name = "iniconfig" },
     { name = "packaging" },
     { name = "pluggy" },
     { name = "pygments" },
-    { name = "tomli", marker = "python_full_version < '3.11' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "tomli", marker = "python_full_version < '3.11'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e4/47/b9efed96c114afcfa3c9d3fe98a76a1d14c74a9e266d397cf6eb64be5e01/pytest-9.1.1.tar.gz", hash = "sha256:1088fbde8f2b49d95a549a195707afa7a76a3ce9bcadc26b6d71f0ffda5fe313", size = 1636369, upload-time = "2026-06-19T10:58:32.857Z" }
 wheels = [
@@ -1920,7 +1925,7 @@ name = "roman-numerals-py"
 version = "4.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "roman-numerals", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "roman-numerals" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/cb/b5/de96fca640f4f656eb79bbee0e79aeec52e3e0e359f8a3e6a0d366378b64/roman_numerals_py-4.1.0.tar.gz", hash = "sha256:f5d7b2b4ca52dd855ef7ab8eb3590f428c0b1ea480736ce32b01fef2a5f8daf9", size = 4274, upload-time = "2025-12-17T18:25:41.153Z" }
 wheels = [
@@ -1993,23 +1998,23 @@ name = "sphinx"
 version = "8.2.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "alabaster", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "babel", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "colorama", marker = "(python_full_version >= '3.12' and sys_platform == 'win32') or (python_full_version < '3.12' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (python_full_version < '3.12' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (sys_platform != 'win32' and extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (sys_platform != 'win32' and extra != 'group-17-horizon-hwm-store-test-data-horizon-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3') or (sys_platform != 'win32' and extra != 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "docutils", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "imagesize", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "jinja2", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "packaging", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "pygments", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "requests", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "roman-numerals-py", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "snowballstemmer", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinxcontrib-applehelp", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinxcontrib-devhelp", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinxcontrib-htmlhelp", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinxcontrib-jsmath", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinxcontrib-qthelp", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinxcontrib-serializinghtml", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "alabaster" },
+    { name = "babel" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "docutils" },
+    { name = "imagesize" },
+    { name = "jinja2" },
+    { name = "packaging" },
+    { name = "pygments" },
+    { name = "requests" },
+    { name = "roman-numerals-py" },
+    { name = "snowballstemmer" },
+    { name = "sphinxcontrib-applehelp" },
+    { name = "sphinxcontrib-devhelp" },
+    { name = "sphinxcontrib-htmlhelp" },
+    { name = "sphinxcontrib-jsmath" },
+    { name = "sphinxcontrib-qthelp" },
+    { name = "sphinxcontrib-serializinghtml" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/38/ad/4360e50ed56cb483667b8e6dadf2d3fda62359593faabbe749a27c4eaca6/sphinx-8.2.3.tar.gz", hash = "sha256:398ad29dee7f63a75888314e9424d40f52ce5a6a87ae88e7071e80af296ec348", size = 8321876, upload-time = "2025-03-02T22:31:59.658Z" }
 wheels = [
@@ -2021,7 +2026,7 @@ name = "sphinx-autodoc-typehints"
 version = "3.5.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "sphinx" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/34/4f/4fd5583678bb7dc8afa69e9b309e6a99ee8d79ad3a4728f4e52fd7cb37c7/sphinx_autodoc_typehints-3.5.2.tar.gz", hash = "sha256:5fcd4a3eb7aa89424c1e2e32bedca66edc38367569c9169a80f4b3e934171fdb", size = 37839, upload-time = "2025-10-16T00:50:15.743Z" }
 wheels = [
@@ -2033,7 +2038,7 @@ name = "sphinx-basic-ng"
 version = "1.0.0b2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "sphinx" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/98/0b/a866924ded68efec7a1759587a4e478aec7559d8165fac8b2ad1c0e774d6/sphinx_basic_ng-1.0.0b2.tar.gz", hash = "sha256:9ec55a47c90c8c002b5960c57492ec3021f5193cb26cebc2dc4ea226848651c9", size = 20736, upload-time = "2023-07-08T18:40:54.166Z" }
 wheels = [
@@ -2045,7 +2050,7 @@ name = "sphinx-copybutton"
 version = "0.5.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "sphinx" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/fc/2b/a964715e7f5295f77509e59309959f4125122d648f86b4fe7d70ca1d882c/sphinx-copybutton-0.5.2.tar.gz", hash = "sha256:4cf17c82fb9646d1bc9ca92ac280813a3b605d8c421225fd9913154103ee1fbd", size = 23039, upload-time = "2023-04-14T08:10:22.998Z" }
 wheels = [
@@ -2057,9 +2062,9 @@ name = "sphinx-favicon"
 version = "1.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "imagesize", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "requests", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "imagesize" },
+    { name = "requests" },
+    { name = "sphinx" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/2c/26/e7ca2321e6286d6ed6a2e824a0ee35ae660ec9a45a4719e33a627ce9e4d2/sphinx_favicon-1.1.0.tar.gz", hash = "sha256:6f65939fc2a6ac4259c88b09169f0b72681cd4c03dd1d0cf91c57a1fa314e50b", size = 8744, upload-time = "2026-02-12T20:55:41.294Z" }
 wheels = [
@@ -2071,9 +2076,9 @@ name = "sphinx-jinja2-compat"
 version = "0.4.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "jinja2", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "markupsafe", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "standard-imghdr", marker = "python_full_version >= '3.13' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "jinja2" },
+    { name = "markupsafe" },
+    { name = "standard-imghdr", marker = "python_full_version >= '3.13'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/43/98/43313781f29e8c6c46fec907430310172d6f207e95e4fbea9289990fbbfe/sphinx_jinja2_compat-0.4.1.tar.gz", hash = "sha256:0188f0802d42c3da72997533b55a00815659a78d3f81d4b4747b1fb15a5728e6", size = 5222, upload-time = "2025-08-06T20:06:25.824Z" }
 wheels = [
@@ -2085,7 +2090,7 @@ name = "sphinx-last-updated-by-git"
 version = "0.3.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "sphinx" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/03/fd/de1685b6dab173dff31da24e0d3b29f02873fc24a1cdbb7678721ddc8581/sphinx_last_updated_by_git-0.3.8.tar.gz", hash = "sha256:c145011f4609d841805b69a9300099fc02fed8f5bb9e5bcef77d97aea97b7761", size = 10785, upload-time = "2024-08-11T07:15:54.601Z" }
 wheels = [
@@ -2097,14 +2102,14 @@ name = "sphinx-prompt"
 version = "1.10.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "certifi", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "docutils", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "idna", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "jinja2", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "pygments", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "requests", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "urllib3", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "certifi" },
+    { name = "docutils" },
+    { name = "idna" },
+    { name = "jinja2" },
+    { name = "pygments" },
+    { name = "requests" },
+    { name = "sphinx" },
+    { name = "urllib3" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/d0/a3/91293c0e0f0b76d0697ba7a41541929ca3f5457671d008bd84a9bde17e21/sphinx_prompt-1.10.2.tar.gz", hash = "sha256:47b592ba75caebd044b0eddf7a5a1b6e0aef6df587b034377cd101a999b686ba", size = 5566, upload-time = "2025-11-28T09:23:18.057Z" }
 wheels = [
@@ -2116,9 +2121,9 @@ name = "sphinx-tabs"
 version = "3.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "docutils", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "pygments", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "docutils" },
+    { name = "pygments" },
+    { name = "sphinx" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ce/30/ca5b0de830f369968d8e3483dd45a8908fd10169c05cd9837f0bd075982e/sphinx_tabs-3.5.0.tar.gz", hash = "sha256:91dba1187e4c35fd37380a56ac228bbd54c6c649b2351829f3bf033718277537", size = 17006, upload-time = "2026-03-03T23:00:30.404Z" }
 wheels = [
@@ -2130,24 +2135,24 @@ name = "sphinx-toolbox"
 version = "4.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "apeye", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "autodocsumm", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "beautifulsoup4", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "cachecontrol", extra = ["filecache"], marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "dict2css", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "docutils", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "domdf-python-tools", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "filelock", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "html5lib", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "roman", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "ruamel-yaml", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx-autodoc-typehints", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx-jinja2-compat", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx-prompt", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "sphinx-tabs", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "tabulate", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "typing-extensions", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "apeye" },
+    { name = "autodocsumm" },
+    { name = "beautifulsoup4" },
+    { name = "cachecontrol", extra = ["filecache"] },
+    { name = "dict2css" },
+    { name = "docutils" },
+    { name = "domdf-python-tools" },
+    { name = "filelock" },
+    { name = "html5lib" },
+    { name = "roman" },
+    { name = "ruamel-yaml" },
+    { name = "sphinx" },
+    { name = "sphinx-autodoc-typehints" },
+    { name = "sphinx-jinja2-compat" },
+    { name = "sphinx-prompt" },
+    { name = "sphinx-tabs" },
+    { name = "tabulate" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/92/79/aad9e89d9a34ed8a960e424b947cd9340688062997f1ebe35e21d840052e/sphinx_toolbox-4.3.1.tar.gz", hash = "sha256:05c5fd3add7e60ef0626e52ad57439d695bde89518a85cb5a88bd8fac71be28b", size = 118103, upload-time = "2026-09-14T19:22:05.601Z" }
 wheels = [
@@ -2213,8 +2218,8 @@ name = "sphinxcontrib-towncrier"
 version = "0.5.0a0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "sphinx", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "towncrier", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "sphinx" },
+    { name = "towncrier" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/21/fe/72ed57093e28af10595c50839b183c5fdf0952482e9ef0ca6eb90eb85c5d/sphinxcontrib_towncrier-0.5.0a0.tar.gz", hash = "sha256:294e69df6e275e7a86df7ea6a927cc7c28c2c370a884cd5c45de6ec989858f27", size = 62453, upload-time = "2025-02-28T01:59:16.894Z" }
 wheels = [
@@ -2244,7 +2249,7 @@ name = "tinycss2"
 version = "1.5.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "webencodings", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "webencodings" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a3/ae/2ca4913e5c0f09781d75482874c3a95db9105462a92ddd303c7d285d3df2/tinycss2-1.5.1.tar.gz", hash = "sha256:d339d2b616ba90ccce58da8495a78f46e55d4d25f9fd71dfd526f07e7d53f957", size = 88195, upload-time = "2025-11-23T10:29:10.082Z" }
 wheels = [
@@ -2310,8 +2315,8 @@ name = "towncrier"
 version = "26.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "click", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "jinja2", marker = "python_full_version >= '3.12' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2') or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "click" },
+    { name = "jinja2" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/92/d4/e85ce614bf45b1a7fe13b82cc687819c2eaac5a1dd94b84834322095fd98/towncrier-26.9.0.tar.gz", hash = "sha256:ace9031631c718cc0709107b8755e6e31350eb8acdc877af43df3177addb9a55", size = 79338, upload-time = "2026-09-04T12:57:25.341Z" }
 wheels = [
