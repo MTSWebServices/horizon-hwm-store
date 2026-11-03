@@ -762,7 +762,7 @@ client-sync = [
 
 [[package]]
 name = "data-horizon"
-version = "2.0.2"
+version = "2.0.3"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "python_full_version >= '3.15'",
@@ -776,9 +776,9 @@ dependencies = [
     { name = "pydantic", marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
     { name = "typing-extensions", marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e9/7c/15107e9f7ac448f4dbc745e24d52e4b878c3c5de31a5b7bb78cc0237cf95/data_horizon-2.0.2.tar.gz", hash = "sha256:98465a1b113ae05f72e10451550c7dc99720a06d9eb0221956b8b84800f7408a", size = 61500, upload-time = "2026-09-17T08:30:48.475Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/21/83/160a128050f7ee35d0b374f9a428e34022646932bf48f38a3e2034e1e085/data_horizon-2.0.3.tar.gz", hash = "sha256:5e2031cd39bc526504fbf1c4e1278dd15d9b4d49ae834c75356bcbf761b380ec", size = 62638, upload-time = "2026-11-03T08:48:31.673Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c8/5c/ed4d80f79c2a96de594e05c582a4fd8f3acccaaa0c26b8b8c597a4004242/data_horizon-2.0.2-py3-none-any.whl", hash = "sha256:f0049fa1823e4cf4d50e6228ea402dedbc2d07f2e3d50ba91ff407db2f6a378b", size = 113305, upload-time = "2026-09-17T08:30:46.742Z" },
+    { url = "https://files.pythonhosted.org/packages/92/d9/251442943647599be66751c2068ebf19ed8bbb7a63466c24d86722cacad8/data_horizon-2.0.3-py3-none-any.whl", hash = "sha256:118b747f097fcd2871bddf824e14a1700f5bc68bd7c03bf7d1392bd2d55c0cb0", size = 113306, upload-time = "2026-11-03T08:48:29.982Z" },
 ]
 
 [package.optional-dependencies]
@@ -935,7 +935,7 @@ source = { editable = "." }
 default-groups = []
 dependencies = [
     { name = "data-horizon", version = "1.1.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
-    { name = "data-horizon", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "data-horizon", version = "2.0.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra != 'group-17-horizon-hwm-store-test-data-horizon-1' or extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
     { name = "etl-entities", version = "2.6.1", source = { registry = "https://pypi.org/simple" }, marker = "extra == 'group-17-horizon-hwm-store-test-etl-entities-2' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
     { name = "etl-entities", version = "3.0.4", source = { registry = "https://pypi.org/simple" }, marker = "extra != 'group-17-horizon-hwm-store-test-etl-entities-2' or extra == 'group-17-horizon-hwm-store-test-etl-entities-3' or (extra == 'group-17-horizon-hwm-store-test-data-horizon-1' and extra == 'group-17-horizon-hwm-store-test-data-horizon-2')" },
     { name = "pydantic" },
@@ -969,7 +969,7 @@ test-data-horizon-1 = [
     { name = "data-horizon", version = "1.1.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-1' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 test-data-horizon-2 = [
-    { name = "data-horizon", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
+    { name = "data-horizon", version = "2.0.3", source = { registry = "https://pypi.org/simple" }, extra = ["client-sync"], marker = "extra == 'group-17-horizon-hwm-store-test-data-horizon-2' or (extra == 'group-17-horizon-hwm-store-test-etl-entities-2' and extra == 'group-17-horizon-hwm-store-test-etl-entities-3')" },
 ]
 test-etl-entities-2 = [
     { name = "etl-entities", version = "2.6.1", source = { registry = "https://pypi.org/simple" } },
