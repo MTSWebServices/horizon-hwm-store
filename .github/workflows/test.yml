@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DEFAULT_PYTHON: '3.14'
+  DEFAULT_PYTHON: '3.15'
   MIN_COVERAGE: 90
 
 permissions:
@@ -29,7 +29,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.14']
+        python-version: ['3.15']
         etl-entities-version: ['2', '3']
         horizon-client-version: ['1', '2']
         horizon-image-version: ['2.0.2']
