@@ -64,23 +64,23 @@ exclude = ["docs", "tests"]
 [dependency-groups]
 test = [
     "coverage~=7.16.2",
-    "omegaconf>=2.3.1,<2.5.0",
-    "pytest>=9.1.1,<9.3.0",
+    "omegaconf~=2.4.0",
+    "pytest~=9.2.0",
 ]
 test-etl-entities-2 = ["etl-entities<3"]
 test-etl-entities-3 = ["etl-entities<4,>=3"]
 test-data-horizon-1 = ["data-horizon[client-sync]<2.0,>=1.0"]
 test-data-horizon-2 = ["data-horizon[client-sync]<3.0,>=2.0"]
 dev = [
-    "mypy>=2.3.1,<2.5.0",
-    "prek~=0.5.4",
-    "ruff>=0.16.9,<0.18.0",
+    "mypy~=2.4.1",
+    "prek~=0.5.9",
+    "ruff~=0.17.3",
     "types-psutil~=7.2.0",
 ]
 docs = [
     "furo~=2025.12.19",
     "numpydoc~=1.11.0",
-    "packaging~=26.0",
+    "packaging~=26.3",
     # sphinx-toolbox doesn't support Sphinx 9 yet
     "sphinx~=8.2.3",
     "sphinx-copybutton~=0.5.2",
