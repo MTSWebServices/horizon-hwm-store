@@ -21,9 +21,6 @@ updates:
       - type:dependency
     versioning-strategy: increase-if-necessary
     ignore:
-      # https://github.com/sphinx-toolbox/sphinx-toolbox/issues/201
-      - dependency-name: sphinx
-        update-types: ["version-update:semver-major"]
       - dependency-name: data-horizon
       - dependency-name: etl-entities
     # https://til.simonwillison.net/github/dependabot-python-setup
